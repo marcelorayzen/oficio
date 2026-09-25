@@ -9,7 +9,8 @@ Um profissional aqui é a soma de:
 papel + conhecimento + skills + ferramentas + memória + permissões + avaliação + supervisão
 ```
 
-Piloto: **Governança de Dados**. Segundo profissional, só em desenho por enquanto: **QA**.
+Dois ofícios, **Governança de Dados** e **QA**, num agente só — separados no desenho (skills e
+avaliação próprias), juntos no runtime.
 
 ## Estado
 

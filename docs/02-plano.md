@@ -17,11 +17,11 @@ Cada fase tem um critério de saída verificável. Não se passa para a próxima
 **Saída:** gabaritos revisados por Marcelo. Até lá, uma nota alta do agente só mede concordância
 com o Claude.
 
-## Fase 0-QA — Segundo profissional, só desenho (em paralelo) ← **agora**
+## Fase 0-QA — Segundo ofício, em paralelo ← **agora**
 
-Decisão de 25/09: as duas trilhas andam juntas **no desenho**, porque o objetivo é chegar ao
-mercado nas duas funções (analista de governança ou de QA). O **runtime** continua um só: QA não
-ganha perfil do Hermes antes de o piloto de governança passar na Fase 3.
+Decisão de 25/09: as duas trilhas andam juntas, porque o objetivo é chegar ao mercado nas duas
+funções (analista de governança ou de QA). E rodam no **mesmo agente** — ver "Um agente, vários
+ofícios" em `docs/00-visao.md`.
 
 - [x] Base de QA na mesma Aurora Varejo (`base/qa/`): perfil do time, contrato OpenAPI da API de
       pedidos, três histórias, evidência de um defeito
@@ -32,17 +32,19 @@ ganha perfil do Hermes antes de o piloto de governança passar na Fase 3.
 - [ ] Revisão dos gabaritos por Marcelo — mesma ressalva da governança
 
 **Saída:** gabaritos revisados. Casos que cruzam as trilhas (QA-004 × HU-101, QA-005 ×
-`clientes.cadastro`) são o teste de que os dois profissionais compartilham o mesmo mundo.
+`clientes.cadastro`) são o teste de que os dois ofícios compartilham o mesmo mundo.
 
-## Fase 1 — Um profissional, só leitura
+## Fase 1 — Um agente, dois ofícios, só leitura
 
 - Hermes pinado por commit, **num container próprio** (não o HUB existente do Rayzen).
-- Um perfil `governanca`: `SOUL.md` com papel e limites, toolsets mínimos (sem terminal, sem
-  browser), `skills.write_approval: true`, config montado somente-leitura.
-- Carregar `skills/governanca/` no perfil; o agente recebe `base/` montada somente-leitura.
-- Os casos rodam; resultado comparado à resposta esperada.
+- Um perfil `oficio`: `SOUL.md` com os papéis e limites dos dois ofícios, toolsets mínimos (sem
+  terminal, sem browser), `skills.write_approval: true`, config montado somente-leitura.
+- Carregar `skills/governanca/` e `skills/qa/` no perfil; o agente recebe `base/` montada
+  somente-leitura.
+- Os casos das duas trilhas rodam; resultado comparado à resposta esperada.
 
-**Saída:** taxa de acerto medida nos casos, com as falhas explicadas. Incluir casos em que a
+**Saída:** taxa de acerto medida **por ofício**, com as falhas explicadas — incluindo se o agente
+escolheu a skill certa para o pedido. Incluir casos em que a
 resposta certa é "não há evidência suficiente" — um agente que sempre acha algo não passa.
 
 ## Fase 2 — Ferramentas de leitura
@@ -62,8 +64,8 @@ resposta certa é "não há evidência suficiente" — um agente que sempre acha
 
 | peça | entra quando |
 |---|---|
-| runtime do segundo profissional (QA) | o piloto passa na Fase 3 — reaproveitando a estrutura. Skills, base e evals de QA já existem (Fase 0-QA) |
-| Bot Mode | houver 2+ profissionais e uso real no desktop |
+| perfil ou container separado por ofício | um ofício precisar de ferramenta ou permissão que o outro não deve ter |
+| Bot Mode | houver 2+ perfis e uso real no desktop |
 | OpenViking | os casos mostrarem falha de **recuperação**, não de raciocínio |
 | Laya | houver centenas de decisões rotuladas e volume que justifique; comparado a LLM local no mesmo hardware |
 | Browser | um caso real exigir sistema web **e** houver conta de serviço de privilégio mínimo |
