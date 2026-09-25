@@ -44,3 +44,4 @@ armadilha que a resposta superficial não evita.
 | 002 | gate de entrada de dados | aprovar porque o negócio precisa |
 | 003 | avaliação de qualidade | confiar cegamente no indicador verde |
 | 004 | avaliação de acesso | confundir pedido incompleto com pedido negado |
+| 005 | linhagem e ciclo de vida | tomar "atualizado em" por "dados atuais" |

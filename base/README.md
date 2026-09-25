@@ -6,7 +6,7 @@ Empresa de varejo **fictícia**. Nenhum dado aqui é real.
 |---|---|
 | `catalogo/` | uma ficha por ativo de dados (metadados, dono, classificação, acesso, qualidade, linhagem) |
 | `dados/` | amostras dos ativos, em CSV |
-| `politicas/` | política de classificação e de acesso da Aurora |
+| `politicas/` | políticas da Aurora: classificação, acesso e ciclo de vida |
 | `pedidos-acesso/` | pedidos de acesso aguardando avaliação |
 | `contexto/` | o que as áreas de negócio relatam (campanhas, reclamações) |
 | `qa/` | a Aurora vista pelo time de produto: perfil, contrato da API, histórias, evidências |
