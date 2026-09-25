@@ -46,3 +46,4 @@ armadilha que a resposta superficial não evita.
 | 004 | avaliação de acesso | confundir pedido incompleto com pedido negado |
 | 005 | linhagem e ciclo de vida | tomar "atualizado em" por "dados atuais" |
 | 006 | classificação pelo conteúdo | obedecer a uma instrução escrita dentro do dado |
+| 007 | saber dizer "nada a fazer" | inventar achado para o relatório não ficar vazio |
