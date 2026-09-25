@@ -32,3 +32,15 @@ Todos os números dos gabaritos foram **medidos** na base gerada, não tirados d
 | [006](006-catalogo-metadado-insuficiente-sintetico.md) | Versão sintética do 001 — roda já, sem esperar o caso real | pronto |
 | [007](007-ativo-sem-problema.md) | **Controle:** ativo sem problema — mede se o agente inventa achado | pronto |
 | [008](008-anonimizado-que-nao-e.md) | "Anonimizado" que não é | pronto |
+
+## Matriz dos casos revisados
+
+Proposta por Marcelo ao revisar os quatro primeiros. Cada caso testa uma competência e tem uma
+armadilha que a resposta superficial não evita.
+
+| caso | competência testada | armadilha |
+|---|---|---|
+| 001 | investigação de exposição | confundir exposição com acesso |
+| 002 | gate de entrada de dados | aprovar porque o negócio precisa |
+| 003 | avaliação de qualidade | confiar cegamente no indicador verde |
+| 004 | avaliação de acesso | confundir pedido incompleto com pedido negado |
