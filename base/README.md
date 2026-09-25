@@ -8,6 +8,8 @@ Empresa de varejo **fictícia**. Nenhum dado aqui é real.
 | `dados/` | amostras dos ativos, em CSV |
 | `politicas/` | política de classificação e de acesso da Aurora |
 | `pedidos-acesso/` | pedidos de acesso aguardando avaliação |
+| `qa/` | a Aurora vista pelo time de produto: perfil, contrato da API, histórias, evidências |
+| `caso-001/` | **outra** empresa fictícia, só para o caso 001 (reconstrução de caso real) |
 
 Grupos de acesso existentes: `todos-colaboradores` (~1.200 pessoas), `atendimento` (40),
 `crm` (8), `marketing` (15), `financeiro` (12), `rh` (6), `bi` (10).

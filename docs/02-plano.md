@@ -10,7 +10,7 @@ Cada fase tem um critério de saída verificável. Não se passa para a próxima
 - [x] Skills do piloto (`skills/governanca/`), adaptadas de `lgpd-skills` — ver `fontes/`
 - [x] Base de teste sintética (`base/`) — escolhida em vez de DataHub (≥ 8 GB de RAM)
 - [x] Casos 002–008 com resposta esperada e critério de acerto, números medidos na base
-- [ ] Caso 001 com os detalhes reais de Marcelo (reconstruído sem dado real)
+- [x] Caso 001 com os detalhes reais de Marcelo (reconstruído sem dado real; material em `base/caso-001/`)
 - [ ] Revisão dos gabaritos por Marcelo — **são a opinião do Claude sobre o que um profissional
       diria, e isso precisa de um profissional de verdade conferindo**
 

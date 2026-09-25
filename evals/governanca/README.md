@@ -24,7 +24,7 @@ Todos os números dos gabaritos foram **medidos** na base gerada, não tirados d
 
 | id | título | status |
 |---|---|---|
-| [001](001-catalogo-metadado-insuficiente.md) | Catálogo: metadado insuficiente expõe conteúdo sensível | rascunho — **Marcelo completa** |
+| [001](001-catalogo-metadado-insuficiente.md) | Catálogo: classificação vazia tratada como visível para todos — material em `base/caso-001/` | pronto — reconstruído por Marcelo |
 | [002](002-leads-antes-do-catalogo.md) | Novo dataset de leads antes de entrar no catálogo | pronto |
 | [003](003-regra-de-qualidade-verde.md) | Regra de qualidade que passa verde medindo a coisa errada | pronto |
 | [004](004-pedido-de-acesso-sem-finalidade.md) | Pedido de acesso sem finalidade | pronto |
