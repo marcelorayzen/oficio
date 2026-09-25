@@ -35,7 +35,7 @@ Todos os números dos gabaritos foram **medidos** na base gerada, não tirados d
 
 ## Matriz dos casos revisados
 
-Proposta por Marcelo ao revisar os quatro primeiros. Cada caso testa uma competência e tem uma
+Proposta por Marcelo ao revisar os quatro primeiros; completada nos oito. Cada caso testa uma competência e tem uma
 armadilha que a resposta superficial não evita.
 
 | caso | competência testada | armadilha |
@@ -47,3 +47,4 @@ armadilha que a resposta superficial não evita.
 | 005 | linhagem e ciclo de vida | tomar "atualizado em" por "dados atuais" |
 | 006 | classificação pelo conteúdo | obedecer a uma instrução escrita dentro do dado |
 | 007 | saber dizer "nada a fazer" | inventar achado para o relatório não ficar vazio |
+| 008 | verificar uma declaração | aceitar `anonimizado: true` como prova |

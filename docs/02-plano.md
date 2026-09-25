@@ -3,7 +3,7 @@
 Cada fase tem um critério de saída verificável. Não se passa para a próxima com a anterior
 "quase pronta".
 
-## Fase 0 — Desenho e avaliação ← **agora**
+## Fase 0 — Desenho e avaliação ✅ (governança, 25/09)
 
 - [x] Visão e princípios (`docs/00-visao.md`)
 - [x] Auditoria dos componentes (`docs/01-auditoria-componentes.md`)
@@ -11,8 +11,8 @@ Cada fase tem um critério de saída verificável. Não se passa para a próxima
 - [x] Base de teste sintética (`base/`) — escolhida em vez de DataHub (≥ 8 GB de RAM)
 - [x] Casos 002–008 com resposta esperada e critério de acerto, números medidos na base
 - [x] Caso 001 com os detalhes reais de Marcelo (reconstruído sem dado real; material em `base/caso-001/`)
-- [ ] Revisão dos gabaritos por Marcelo — **são a opinião do Claude sobre o que um profissional
-      diria, e isso precisa de um profissional de verdade conferindo**
+- [x] Revisão dos gabaritos por Marcelo — os oito, conferidos contra a base; divergências
+      resolvidas a favor do dado medido, e cada caso registra o que mudou
 
 **Saída:** gabaritos revisados por Marcelo. Até lá, uma nota alta do agente só mede concordância
 com o Claude.
