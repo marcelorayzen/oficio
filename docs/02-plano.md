@@ -17,6 +17,23 @@ Cada fase tem um critério de saída verificável. Não se passa para a próxima
 **Saída:** gabaritos revisados por Marcelo. Até lá, uma nota alta do agente só mede concordância
 com o Claude.
 
+## Fase 0-QA — Segundo profissional, só desenho (em paralelo) ← **agora**
+
+Decisão de 25/09: as duas trilhas andam juntas **no desenho**, porque o objetivo é chegar ao
+mercado nas duas funções (analista de governança ou de QA). O **runtime** continua um só: QA não
+ganha perfil do Hermes antes de o piloto de governança passar na Fase 3.
+
+- [x] Base de QA na mesma Aurora Varejo (`base/qa/`): perfil do time, contrato OpenAPI da API de
+      pedidos, três histórias, evidência de um defeito
+- [x] Skills (`skills/qa/`): `analisar-testabilidade`, `estrategia-de-teste`, `casos-de-api`,
+      `relatar-defeito`, com regras comuns em `referencias/`
+- [x] Casos QA-001 a QA-006 com gabarito, incluindo um controle (história pronta) e um que cruza
+      com governança (exportação de dado pessoal)
+- [ ] Revisão dos gabaritos por Marcelo — mesma ressalva da governança
+
+**Saída:** gabaritos revisados. Casos que cruzam as trilhas (QA-004 × HU-101, QA-005 ×
+`clientes.cadastro`) são o teste de que os dois profissionais compartilham o mesmo mundo.
+
 ## Fase 1 — Um profissional, só leitura
 
 - Hermes pinado por commit, **num container próprio** (não o HUB existente do Rayzen).
@@ -45,7 +62,7 @@ resposta certa é "não há evidência suficiente" — um agente que sempre acha
 
 | peça | entra quando |
 |---|---|
-| segundo profissional (QA) | o piloto passa na Fase 3 — reaproveitando a estrutura |
+| runtime do segundo profissional (QA) | o piloto passa na Fase 3 — reaproveitando a estrutura. Skills, base e evals de QA já existem (Fase 0-QA) |
 | Bot Mode | houver 2+ profissionais e uso real no desktop |
 | OpenViking | os casos mostrarem falha de **recuperação**, não de raciocínio |
 | Laya | houver centenas de decisões rotuladas e volume que justifique; comparado a LLM local no mesmo hardware |

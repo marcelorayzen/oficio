@@ -41,15 +41,15 @@ evidência, quem aprova o quê — é o que este projeto constrói.
 
 ## Anatomia de um profissional
 
-| componente | Governança (piloto) |
-|---|---|
-| papel | avaliar, diagnosticar e propor — nunca decidir política |
-| conhecimento | catálogo, metadados, classificação, qualidade, linhagem, LGPD |
-| skills | `metadata-analysis` · `classification` · `data-quality` · `access-review` · `policy-analysis` · `impact-analysis` · `evidence-generation` |
-| ferramentas | leitura de catálogo/documentos; escrita só em rascunho |
-| **pode** | consultar · analisar · comparar · produzir proposta e evidência |
-| **não pode** | alterar política · conceder acesso · publicar dado sensível · aprovar o próprio trabalho |
-| avaliação | `evals/governanca/` — casos com resposta esperada |
+| componente | Governança (piloto) | QA (em desenho) |
+|---|---|---|
+| papel | avaliar, diagnosticar e propor — nunca decidir política | analisar, projetar testes e relatar — nunca decidir regra de negócio |
+| conhecimento | catálogo, metadados, classificação, qualidade, linhagem, LGPD | histórias, contratos de API, técnicas de teste, risco, perfil do time |
+| skills | `metadata-analysis` · `classification` · `data-quality` · `access-review` · `policy-analysis` · `impact-analysis` · `evidence-generation` | `analisar-testabilidade` · `estrategia-de-teste` · `casos-de-api` · `relatar-defeito` |
+| ferramentas | leitura de catálogo/documentos; escrita só em rascunho | leitura de histórias, contratos e evidências; escrita só em rascunho |
+| **pode** | consultar · analisar · comparar · produzir proposta e evidência | perguntar ao PO · propor casos, código de teste e massa sintética · redigir bug report |
+| **não pode** | alterar política · conceder acesso · publicar dado sensível · aprovar o próprio trabalho | decidir regra que o PO não decidiu · usar dado de produção · abrir ou fechar ticket · rodar teste em ambiente da empresa |
+| avaliação | `evals/governanca/` — casos com resposta esperada | `evals/qa/` |
 
 ### Formato de saída que o profissional deve produzir
 

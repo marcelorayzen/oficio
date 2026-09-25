@@ -12,6 +12,7 @@ Cada linha diz se o fato é **confirmado** (lido na doc/código do próprio proj
 | Hermes **Bot Mode** | "a camada de equipe" | é plugin do **app desktop (Electron)**; roda sobre perfis | opcional, não é fundação |
 | **OpenViking** | "memória + conhecimento + skills para o Hermes" | integração com Hermes é **só memória**; AGPLv3; exige embedding + VLM | adiar |
 | **Laya** | "roteamento barato, economiza LLM" | base é **quase aleatória zero-shot** nas decisões tipadas; precisa fine-tuning | adiar, medir antes |
+| **Jev** (TypeSafe AI) | "decisões tipadas baratas e rápidas" | API **hospedada**, lançada em 15/09/2026; números são do fabricante; mesma forma de pergunta do Laya | adiar, medir antes |
 | **Browser Use** | "as mãos do agente" | Hermes já tem browser nativo; Browser Use é backend de **nuvem** | último a entrar |
 | Scientific Skills | "exemplo de especialização" | confirmado como referência de formato | referência |
 | Cybersecurity Skills | "da Anthropic" | **desmentido** — comunitário, sem afiliação | referência |
@@ -107,6 +108,31 @@ local pequeno, resolve. Laya passa a fazer sentido quando houver (a) volume que 
 centenas de decisões rotuladas — que os próprios `evals/` e o uso real vão produzir. A comparação
 justa é contra um LLM local pequeno, no mesmo hardware, com as mesmas decisões.
 
+## Jev (TypeSafe AI) — acrescentado em 25/09
+
+Lido em 25/09 no blog e na documentação do fabricante e em análises de terceiros publicadas na
+semana do lançamento. **Nada foi chamado nem medido.**
+
+**Declarado pelo fabricante:**
+- Modelo "System One": não gera texto, devolve **decisão tipada com probabilidade calibrada**, e
+  não consegue devolver valor fora do schema.
+- Preço de lançamento: US$ 0,042 por milhão de tokens de entrada, saída grátis.
+- Latência de 70 a 500 ms ponta a ponta.
+
+**Confirmado pela leitura:**
+- É **API hospedada** — o texto da decisão sai da máquina. Com dado sintético isso cabe no
+  princípio 6; com material de empregador, não.
+- TypeSafe saiu de stealth em 15/09/2026. Uma semana de vida no momento desta leitura.
+
+**O que a comparação com o Laya ensina:** as operações têm a mesma forma (`choice`, `score`,
+probabilidade de verdadeiro). Resumos de IA sobre o Jev chegaram a usar o termo `noul` — que é
+vocabulário do Laya —, então parte do que circula sobre ele pode ser mistura dos dois. Ler na fonte.
+
+**Veredito:** adiar e medir, pela mesma régua do Laya e do princípio 8. O ponto de entrada natural
+é uma interface de decisão com três operações e duas implementações — LLM barato com schema
+(funciona hoje) e Jev — trocáveis por configuração, comparadas **nas mesmas decisões rotuladas**
+que os `evals/` produzirem. Dependência de terceiro recém-lançada é o tipo que some sem aviso.
+
 ## Browser Use
 
 **Confirmado:**
@@ -152,6 +178,7 @@ Nenhuma entra por `install` em lote.
 - OpenViking — https://github.com/volcengine/OpenViking
 - OpenViking × Hermes — https://github.com/volcengine/OpenViking/blob/main/docs/en/agent-integrations/05-hermes.md
 - Laya — https://github.com/NandhaKishorM/laya · https://huggingface.co/convaiinnovations/laya
+- Jev — https://typesafe.ai/blog/introducing-system-one-models-and-jev · https://docs.typesafe.ai/introduction
 - Browser Use × Hermes — https://docs.browser-use.com/cloud/tutorials/integrations/hermes-agent
 - Scientific skills — https://github.com/K-Dense-AI/scientific-agent-skills
 - Cybersecurity skills — https://github.com/mukul975/anthropic-cybersecurity-skills

@@ -1,0 +1,111 @@
+openapi: 3.0.3
+info:
+  title: Aurora Pedidos API
+  version: 2.3.0
+  description: API de pedidos do e-commerce da Aurora Varejo (fictícia).
+servers:
+  - url: https://api.qa.aurora.exemplo.test/v2
+security:
+  - bearerAuth: []
+paths:
+  /pedidos:
+    get:
+      summary: Lista os pedidos do cliente autenticado
+      parameters:
+        - {name: pagina, in: query, schema: {type: integer, minimum: 1, default: 1}}
+        - {name: tamanho, in: query, schema: {type: integer, minimum: 1, maximum: 50, default: 20}}
+      responses:
+        '200':
+          description: Página de pedidos
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/PaginaDePedidos'}
+        '401': {description: Não autenticado}
+    post:
+      summary: Cria um pedido
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: {$ref: '#/components/schemas/NovoPedido'}
+      responses:
+        '201':
+          description: Pedido criado
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Pedido'}
+        '400': {description: Corpo inválido}
+        '401': {description: Não autenticado}
+  /pedidos/{id}:
+    get:
+      summary: Detalhe de um pedido
+      parameters:
+        - {name: id, in: path, required: true, schema: {type: string, pattern: '^PD-[0-9]{5}$'}}
+      responses:
+        '200':
+          description: Pedido
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Pedido'}
+        '401': {description: Não autenticado}
+        '404': {description: Pedido não encontrado}
+  /pedidos/{id}/cancelamento:
+    post:
+      summary: Cancela um pedido
+      parameters:
+        - {name: id, in: path, required: true, schema: {type: string, pattern: '^PD-[0-9]{5}$'}}
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required: [motivo]
+              properties:
+                motivo: {type: string, minLength: 5, maxLength: 200}
+      responses:
+        '200':
+          description: Pedido cancelado
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Pedido'}
+        '401': {description: Não autenticado}
+        '404': {description: Pedido não encontrado}
+        '409': {description: Pedido em estado que não permite cancelamento}
+components:
+  securitySchemes:
+    bearerAuth: {type: http, scheme: bearer, bearerFormat: JWT}
+  schemas:
+    NovoPedido:
+      type: object
+      required: [itens, cep_entrega]
+      properties:
+        itens:
+          type: array
+          minItems: 1
+          maxItems: 30
+          items:
+            type: object
+            required: [sku, quantidade]
+            properties:
+              sku: {type: string, pattern: '^SKU-[0-9]{4}$'}
+              quantidade: {type: integer, minimum: 1, maximum: 10}
+        cep_entrega: {type: string, pattern: '^[0-9]{5}-[0-9]{3}$'}
+        cupom: {type: string, maxLength: 20}
+    Pedido:
+      type: object
+      properties:
+        id_pedido: {type: string}
+        status: {type: string, enum: [criado, pago, enviado, entregue, cancelado]}
+        itens: {type: array, items: {type: object}}
+        subtotal: {type: number}
+        frete: {type: number}
+        desconto: {type: number}
+        total: {type: number}
+        criado_em: {type: string, format: date-time}
+    PaginaDePedidos:
+      type: object
+      properties:
+        pagina: {type: integer}
+        total_paginas: {type: integer}
+        itens: {type: array, items: {$ref: '#/components/schemas/Pedido'}}
