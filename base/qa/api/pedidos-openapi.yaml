@@ -69,6 +69,7 @@ paths:
           content:
             application/json:
               schema: {$ref: '#/components/schemas/Pedido'}
+        '400': {description: Motivo ausente ou fora do tamanho}
         '401': {description: Não autenticado}
         '404': {description: Pedido não encontrado}
         '409': {description: Pedido em estado que não permite cancelamento}

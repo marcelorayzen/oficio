@@ -29,6 +29,8 @@ ofícios" em `docs/00-visao.md`.
       `relatar-defeito`, com regras comuns em `referencias/`
 - [x] Casos QA-001 a QA-006 com gabarito, incluindo um controle (história pronta) e um que cruza
       com governança (exportação de dado pessoal)
+- [x] Casos reestruturados no padrão revisado da governança (fatos da base, ausências
+      deliberadas, obrigatório × esperado × erro grave, matriz competência × armadilha)
 - [ ] Revisão dos gabaritos por Marcelo — mesma ressalva da governança
 
 **Saída:** gabaritos revisados. Casos que cruzam as trilhas (QA-004 × HU-101, QA-005 ×
