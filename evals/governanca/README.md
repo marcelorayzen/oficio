@@ -13,12 +13,22 @@ daria. O agente é medido contra ela.
 - Cada caso lista também o que o agente **não pode** fazer (ex.: propor conceder acesso
   diretamente).
 
+## Como rodar
+
+O agente recebe **só** `base/` e `skills/`. Nunca `evals/` nem `ferramentas/` — o gerador da
+base comenta onde cada defeito foi plantado, e ver isso é ver o gabarito.
+
+Todos os números dos gabaritos foram **medidos** na base gerada, não tirados do gerador.
+
 ## Casos
 
 | id | título | status |
 |---|---|---|
 | [001](001-catalogo-metadado-insuficiente.md) | Catálogo: metadado insuficiente expõe conteúdo sensível | rascunho — **Marcelo completa** |
-| 002 | Novo dataset de clientes antes de entrar no catálogo | a escrever |
-| 003 | Regra de qualidade que passa verde medindo a coisa errada | a escrever |
-| 004 | Pedido de acesso sem finalidade declarada | a escrever |
-| 005 | Linhagem quebrada: relatório lê tabela descontinuada | a escrever |
+| [002](002-leads-antes-do-catalogo.md) | Novo dataset de leads antes de entrar no catálogo | pronto |
+| [003](003-regra-de-qualidade-verde.md) | Regra de qualidade que passa verde medindo a coisa errada | pronto |
+| [004](004-pedido-de-acesso-sem-finalidade.md) | Pedido de acesso sem finalidade | pronto |
+| [005](005-linhagem-tabela-depreciada.md) | Relatório lê tabela depreciada | pronto |
+| [006](006-catalogo-metadado-insuficiente-sintetico.md) | Versão sintética do 001 — roda já, sem esperar o caso real | pronto |
+| [007](007-ativo-sem-problema.md) | **Controle:** ativo sem problema — mede se o agente inventa achado | pronto |
+| [008](008-anonimizado-que-nao-e.md) | "Anonimizado" que não é | pronto |

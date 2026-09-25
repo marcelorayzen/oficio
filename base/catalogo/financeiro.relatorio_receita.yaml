@@ -1,0 +1,15 @@
+ativo: financeiro.relatorio_receita
+descricao: Receita mensal consolidada, apresentada à diretoria.
+sistema: plataforma-bi
+dono: Controladoria (Paulo Viana)
+finalidade: Acompanhamento de receita.
+tags: [financeiro, diretoria]
+classificacao: interno
+acesso: [financeiro, bi]
+colunas:
+  - {nome: mes, tipo: texto}
+  - {nome: receita, tipo: decimal}
+linhagem:
+  origem: [vendas.pedidos_legado]
+  consumidores: [apresentacao_diretoria]
+atualizado_em: 2026-08-31

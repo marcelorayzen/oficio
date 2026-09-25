@@ -13,14 +13,18 @@ Piloto: **Governança de Dados**.
 
 ## Estado
 
-Fase 0 — desenho e auditoria. **Nada instalado.**
+Fase 0 — skills do piloto escritas e base de teste pronta. **Nada instalado; nenhum agente rodou ainda.**
 
 | documento | o que responde |
 |---|---|
 | [`docs/00-visao.md`](docs/00-visao.md) | o que é, as quatro camadas, os princípios que não se negociam |
 | [`docs/01-auditoria-componentes.md`](docs/01-auditoria-componentes.md) | o que cada peça candidata **de fato** faz — confirmado × declarado × desmentido |
 | [`docs/02-plano.md`](docs/02-plano.md) | ordem de execução e o critério para cada peça entrar |
-| [`evals/governanca/`](evals/governanca/) | casos com resposta esperada — escritos **antes** do agente |
+| [`skills/governanca/`](skills/governanca/) | as skills do profissional — `avaliar-ativo` orquestra as outras quatro |
+| [`base/`](base/) | **Aurora Varejo**, empresa fictícia: catálogo, dados, políticas, pedidos de acesso — o que o agente enxerga |
+| [`evals/governanca/`](evals/governanca/) | casos com resposta esperada — o agente **nunca** vê esta pasta |
+| [`fontes/`](fontes/) | skills de terceiros no commit exato, com licença, e o que foi adaptado delas |
+| [`ferramentas/gerar_base.py`](ferramentas/gerar_base.py) | gera `base/dados/` — determinístico, sem dependência |
 
 ## Relação com o Rayzen
 

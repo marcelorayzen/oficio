@@ -1,0 +1,22 @@
+ativo: vendas.pedidos_legado
+descricao: Pedidos do sistema antigo (2023–2024).
+sistema: plataforma-dados / schema vendas
+dono: Gerência de E-commerce (Clara Nunes)
+status: depreciado
+depreciado_em: 2026-03-01
+nota_depreciacao: "Substituído por vendas.pedidos. Sem carga nova desde 2025-01. Será apagado em 2026-12."
+finalidade: Histórico de pedidos.
+base_legal: execução de contrato (Art. 7º, V)
+tags: [contem_pii, vendas]
+classificacao: confidencial
+acesso: [financeiro, bi]
+colunas:
+  - {nome: id_pedido, tipo: texto}
+  - {nome: data, tipo: data}
+  - {nome: nome_cliente, tipo: texto}
+  - {nome: email_cliente, tipo: texto}
+  - {nome: valor, tipo: decimal}
+  - {nome: cidade, tipo: texto}
+linhagem:
+  origem: [sistema-ecommerce-antigo]
+  consumidores: [relatorio_receita]

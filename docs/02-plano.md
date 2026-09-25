@@ -7,19 +7,22 @@ Cada fase tem um critério de saída verificável. Não se passa para a próxima
 
 - [x] Visão e princípios (`docs/00-visao.md`)
 - [x] Auditoria dos componentes (`docs/01-auditoria-componentes.md`)
-- [ ] **5–8 casos de governança com resposta esperada** (`evals/governanca/`), começando pelo
-      caso do catálogo, reconstruído sem dado real
-- [ ] Rubrica de correção: o que conta como acerto em cada seção do formato de saída
+- [x] Skills do piloto (`skills/governanca/`), adaptadas de `lgpd-skills` — ver `fontes/`
+- [x] Base de teste sintética (`base/`) — escolhida em vez de DataHub (≥ 8 GB de RAM)
+- [x] Casos 002–008 com resposta esperada e critério de acerto, números medidos na base
+- [ ] Caso 001 com os detalhes reais de Marcelo (reconstruído sem dado real)
+- [ ] Revisão dos gabaritos por Marcelo — **são a opinião do Claude sobre o que um profissional
+      diria, e isso precisa de um profissional de verdade conferindo**
 
-**Saída:** casos escritos e revisados por Marcelo. Nenhum código antes disso.
+**Saída:** gabaritos revisados por Marcelo. Até lá, uma nota alta do agente só mede concordância
+com o Claude.
 
 ## Fase 1 — Um profissional, só leitura
 
 - Hermes pinado por commit, **num container próprio** (não o HUB existente do Rayzen).
 - Um perfil `governanca`: `SOUL.md` com papel e limites, toolsets mínimos (sem terminal, sem
   browser), `skills.write_approval: true`, config montado somente-leitura.
-- Skills escritas à mão, a partir da leitura de `lgpd-skills` e `datahub-skills` — sem
-  instalar as de terceiro direto.
+- Carregar `skills/governanca/` no perfil; o agente recebe `base/` montada somente-leitura.
 - Os casos rodam; resultado comparado à resposta esperada.
 
 **Saída:** taxa de acerto medida nos casos, com as falhas explicadas. Incluir casos em que a

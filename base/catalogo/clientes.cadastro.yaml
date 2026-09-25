@@ -1,0 +1,22 @@
+ativo: clientes.cadastro
+descricao: Cadastro mestre de clientes.
+sistema: plataforma-dados / schema clientes
+dono: Gerência de CRM (Sofia Ramos)
+finalidade: Identificação do cliente para vendas, entrega e atendimento.
+base_legal: execução de contrato (Art. 7º, V)
+tags: [contem_pii, mestre]
+classificacao: confidencial
+acesso: [crm]
+visoes_disponiveis:
+  - {nome: clientes.cadastro_agregado, conteudo: "contagem de clientes por cidade e faixa etária, sem colunas pessoais"}
+colunas:
+  - {nome: id_cliente, tipo: texto}
+  - {nome: nome, tipo: texto}
+  - {nome: cpf, tipo: texto}
+  - {nome: email, tipo: texto}
+  - {nome: telefone, tipo: texto}
+  - {nome: data_nascimento, tipo: data}
+  - {nome: cidade, tipo: texto}
+linhagem:
+  origem: [sistema-ecommerce, sistema-lojas]
+  consumidores: [vendas.pedidos, campanha_pos_venda]

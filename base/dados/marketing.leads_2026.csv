@@ -1,0 +1,61 @@
+id_lead,nome,cpf,email,telefone,data_nascimento,cidade,origem
+1,Tatiane Hirata,301.031.051-07,tatiane.hirata66@exemplo.test,(11) 94899-5562,1955-11-21,Jundiaí,evento
+2,Gabriela Esteves,973.763.116-10,gabriela.esteves46@exemplo.test,(11) 97939-7735,1957-06-14,Santos,lista_comprada
+3,Bruno Duarte,651.333.872-70,bruno.duarte55@exemplo.test,(11) 94006-5563,2003-03-30,Santos,site
+4,Carla Queiroz,108.013.267-88,carla.queiroz62@exemplo.test,(11) 94502-7570,1959-04-23,São Paulo,site
+5,Mariana Almeida,474.687.234-19,mariana.almeida28@exemplo.test,(11) 91958-9883,2011-06-28,São Paulo,lista_comprada
+6,Karina Barbosa,978.820.812-64,karina.barbosa9@exemplo.test,(11) 92113-4853,2004-03-07,Santos,site
+7,Tatiane Hirata,909.169.985-09,tatiane.hirata34@exemplo.test,(11) 94346-6147,1956-09-28,Campinas,evento
+8,Mariana Esteves,751.079.911-22,mariana.esteves69@exemplo.test,(11) 94492-9288,1981-10-07,Osasco,site
+9,Lucas Cardoso,542.784.980-71,lucas.cardoso86@exemplo.test,(11) 95905-2697,1986-10-07,Campinas,evento
+10,Diego Duarte,244.935.348-85,diego.duarte63@exemplo.test,(11) 95114-1832,1959-01-18,São Paulo,lista_comprada
+11,Nicolas Iglesias,052.427.868-76,nicolas.iglesias2@exemplo.test,(11) 92832-2232,2004-09-22,Jundiaí,site
+12,Samuel Barbosa,982.620.450-17,samuel.barbosa46@exemplo.test,(11) 94441-5088,1975-07-23,Jundiaí,site
+13,Lucas Pacheco,232.260.256-60,lucas.pacheco86@exemplo.test,(11) 95065-5371,1952-12-31,Campinas,lista_comprada
+14,Diego Nogueira,733.754.330-18,diego.nogueira85@exemplo.test,(11) 94164-7528,2005-03-17,Osasco,evento
+15,Carla Iglesias,868.501.429-84,carla.iglesias34@exemplo.test,(11) 91626-2776,1977-03-06,Sorocaba,evento
+16,Lucas Lacerda,981.693.406-08,lucas.lacerda1@exemplo.test,(11) 99518-9821,1969-07-13,Jundiaí,lista_comprada
+17,Gabriela Moura,159.514.846-93,gabriela.moura42@exemplo.test,(11) 97592-5844,1969-12-27,Sorocaba,site
+18,Gabriela Pacheco,299.468.044-09,gabriela.pacheco27@exemplo.test,(11) 98043-6279,1974-09-01,Santos,evento
+19,Olívia Gomes,721.489.513-78,olivia.gomes87@exemplo.test,(11) 96085-4680,1962-10-27,Campinas,site
+20,Ana Barbosa,791.769.367-83,ana.barbosa52@exemplo.test,(11) 94997-3417,1986-09-18,Jundiaí,lista_comprada
+21,Ana Duarte,328.708.317-14,ana.duarte18@exemplo.test,(11) 98612-9702,1970-07-16,Sorocaba,lista_comprada
+22,Karina Queiroz,868.727.743-12,karina.queiroz82@exemplo.test,(11) 95543-9540,2010-03-30,Santos,lista_comprada
+23,Heitor Iglesias,143.455.812-65,heitor.iglesias20@exemplo.test,(11) 94788-7275,1969-03-21,Jundiaí,site
+24,Gabriela Cardoso,658.760.366-17,gabriela.cardoso99@exemplo.test,(11) 91320-7232,1971-06-18,Santos,site
+25,Lucas Jardim,688.937.346-48,lucas.jardim63@exemplo.test,(11) 91475-7371,1973-09-10,Osasco,lista_comprada
+26,Mariana Ferraz,298.069.901-29,mariana.ferraz83@exemplo.test,(11) 98022-3223,1966-10-01,Santos,site
+27,Bruno Iglesias,537.556.464-55,bruno.iglesias11@exemplo.test,(11) 98705-1317,1974-09-02,Jundiaí,lista_comprada
+28,Bruno Moura,100.330.923-20,bruno.moura17@exemplo.test,(11) 98758-2874,1988-07-25,Sorocaba,site
+29,Olívia Iglesias,299.124.190-06,olivia.iglesias40@exemplo.test,(11) 97149-7498,1975-08-03,Jundiaí,site
+30,Carla Hirata,491.905.865-90,carla.hirata9@exemplo.test,(11) 99289-6590,1999-07-16,São Paulo,evento
+31,Paulo Duarte,572.628.498-40,paulo.duarte62@exemplo.test,(11) 98616-8136,1969-10-15,Jundiaí,lista_comprada
+32,Isabela Lacerda,147.379.965-13,isabela.lacerda4@exemplo.test,(11) 99098-6325,1986-08-28,Campinas,evento
+33,Gabriela Moura,549.480.831-94,gabriela.moura31@exemplo.test,(11) 97658-9004,1985-07-03,Sorocaba,site
+34,Paulo Rezende,014.363.495-08,paulo.rezende61@exemplo.test,(11) 99698-6632,1968-06-22,Santos,lista_comprada
+35,Samuel Lacerda,744.431.351-20,samuel.lacerda96@exemplo.test,(11) 99779-4033,1977-02-12,Campinas,site
+36,Paulo Iglesias,894.134.352-60,paulo.iglesias39@exemplo.test,(11) 91231-9751,1955-10-15,Campinas,evento
+37,Bruno Barbosa,427.109.477-30,bruno.barbosa57@exemplo.test,(11) 96582-4020,1959-01-14,São Paulo,evento
+38,Paulo Duarte,671.902.294-69,paulo.duarte11@exemplo.test,(11) 95066-2940,2013-04-24,Sorocaba,evento
+39,Vinícius Hirata,677.496.499-05,vinicius.hirata8@exemplo.test,(11) 92625-4404,1961-10-19,Jundiaí,site
+40,Isabela Cardoso,328.120.679-42,isabela.cardoso61@exemplo.test,(11) 95771-1534,1994-08-04,Campinas,evento
+41,João Queiroz,349.361.832-88,joao.queiroz35@exemplo.test,(11) 93330-2169,2002-04-18,São Paulo,site
+42,João Jardim,174.648.877-86,joao.jardim11@exemplo.test,(11) 91653-8078,1969-04-13,Jundiaí,evento
+43,Vinícius Iglesias,139.904.902-06,vinicius.iglesias61@exemplo.test,(11) 99502-8245,2006-05-12,Osasco,site
+44,Tatiane Pacheco,717.565.512-60,tatiane.pacheco43@exemplo.test,(11) 97744-9117,1951-09-25,Osasco,lista_comprada
+45,Mariana Barbosa,154.516.808-33,mariana.barbosa60@exemplo.test,(11) 97770-1888,1967-11-17,Campinas,lista_comprada
+46,Lucas Rezende,703.482.477-02,lucas.rezende16@exemplo.test,(11) 91472-4920,1952-07-28,Jundiaí,site
+47,João Almeida,613.171.274-39,joao.almeida66@exemplo.test,(11) 95479-7807,1959-02-19,Santos,evento
+48,Heitor Queiroz,263.982.146-68,heitor.queiroz44@exemplo.test,(11) 99318-5377,1959-03-24,São Paulo,evento
+49,João Rezende,787.558.867-79,joao.rezende42@exemplo.test,(11) 94090-4912,1995-05-08,Sorocaba,evento
+50,Heitor Pacheco,576.627.028-39,heitor.pacheco76@exemplo.test,(11) 96439-2644,2004-10-06,Santos,site
+51,Renata Queiroz,262.174.596-20,renata.queiroz84@exemplo.test,(11) 92315-6383,2013-08-04,Jundiaí,lista_comprada
+52,Mariana Lacerda,780.913.431-08,mariana.lacerda56@exemplo.test,(11) 92612-2646,1952-06-13,Santos,site
+53,João Almeida,504.556.238-05,joao.almeida53@exemplo.test,(11) 93950-3785,2004-07-21,Campinas,site
+54,Vinícius Nogueira,379.237.474-90,vinicius.nogueira86@exemplo.test,(11) 91153-8622,1953-01-31,Osasco,lista_comprada
+55,Samuel Ferraz,759.464.743-24,samuel.ferraz50@exemplo.test,(11) 98916-2747,2002-01-20,Campinas,evento
+56,Tatiane Moura,440.640.909-26,tatiane.moura96@exemplo.test,(11) 99138-5689,1957-02-10,Campinas,lista_comprada
+57,Lucas Hirata,942.104.709-53,lucas.hirata47@exemplo.test,(11) 93153-2476,1991-08-16,Osasco,evento
+58,Nicolas Ferraz,285.884.247-70,nicolas.ferraz38@exemplo.test,(11) 96549-2886,1990-09-01,Santos,site
+59,Elisa Hirata,851.604.817-96,elisa.hirata48@exemplo.test,(11) 95295-7242,1973-01-10,Jundiaí,evento
+60,Diego Hirata,098.593.174-45,diego.hirata84@exemplo.test,(11) 97689-2911,1966-05-20,Campinas,site

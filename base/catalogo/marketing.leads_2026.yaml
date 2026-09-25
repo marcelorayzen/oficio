@@ -1,0 +1,24 @@
+ativo: marketing.leads_2026
+descricao: Leads captados em 2026.
+sistema: plataforma-dados / schema marketing
+status: pendente_entrada   # aguardando avaliação para entrar no catálogo
+dono:
+finalidade:
+base_legal:
+tags: []
+classificacao:
+acesso: [marketing]
+colunas:
+  - {nome: id_lead, tipo: inteiro}
+  - {nome: nome, tipo: texto}
+  - {nome: cpf, tipo: texto}
+  - {nome: email, tipo: texto}
+  - {nome: telefone, tipo: texto}
+  - {nome: data_nascimento, tipo: data}
+  - {nome: cidade, tipo: texto}
+  - {nome: origem, tipo: texto, valores: [site, evento, lista_comprada]}
+qualidade: []
+linhagem:
+  origem: [formulario-site, planilha-eventos, fornecedor-externo]
+  consumidores: []
+solicitado_por: Equipe de Marketing — "para campanha de fim de ano"

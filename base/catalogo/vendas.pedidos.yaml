@@ -1,0 +1,22 @@
+ativo: vendas.pedidos
+descricao: Pedidos do e-commerce a partir de 2025.
+sistema: plataforma-dados / schema vendas
+dono: Gerência de E-commerce (Clara Nunes)
+finalidade: Processar e entregar pedidos; contato pós-venda.
+base_legal: execução de contrato (Art. 7º, V)
+tags: [contem_pii, vendas]
+classificacao: confidencial
+acesso: [crm, financeiro, bi]
+colunas:
+  - {nome: id_pedido, tipo: texto}
+  - {nome: data, tipo: data}
+  - {nome: nome_cliente, tipo: texto}
+  - {nome: email_cliente, tipo: texto}
+  - {nome: valor, tipo: decimal}
+  - {nome: cidade, tipo: texto}
+qualidade:
+  - {id: Q-12, regra: "email_cliente não nulo", status: verde, ultima_execucao: 2026-08-31}
+  - {id: Q-13, regra: "valor > 0", status: verde, ultima_execucao: 2026-08-31}
+linhagem:
+  origem: [sistema-ecommerce]
+  consumidores: [campanha_pos_venda, relatorio_receita]

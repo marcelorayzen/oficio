@@ -1,0 +1,20 @@
+ativo: atendimento.chamados
+descricao: Chamados abertos pelos clientes no SAC.
+sistema: plataforma-dados / schema atendimento
+dono: Coordenação de Atendimento (Renato Lobo)
+finalidade: Acompanhar e resolver solicitações de clientes.
+base_legal: execução de contrato (Art. 7º, V)
+tags: [sac, operacional]
+classificacao: interno          # atribuída pela regra R-07
+acesso: [todos-colaboradores]
+colunas:
+  - {nome: id_chamado, tipo: texto}
+  - {nome: aberto_em, tipo: data}
+  - {nome: assunto, tipo: texto}
+  - {nome: descricao, tipo: texto_livre, descricao: "Relato do atendente."}
+  - {nome: status, tipo: texto}
+qualidade: []
+linhagem:
+  origem: [sistema-sac]
+  consumidores: [painel_sac_bi]
+criado_em: 2024-06-10

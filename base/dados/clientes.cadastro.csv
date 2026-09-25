@@ -1,0 +1,81 @@
+id_cliente,nome,cpf,email,telefone,data_nascimento,cidade
+CL-00001,Lucas Jardim,573.875.717-32,lucas.jardim93@exemplo.test,(11) 98412-6225,2002-08-27,Osasco
+CL-00002,Bruno Duarte,051.238.282-49,bruno.duarte43@exemplo.test,(11) 97985-8570,1987-11-18,Santos
+CL-00003,Fábio Ferraz,660.937.966-12,fabio.ferraz1@exemplo.test,(11) 94519-4371,1983-09-17,Jundiaí
+CL-00004,Carla Duarte,825.537.147-85,carla.duarte68@exemplo.test,(11) 96134-7367,1953-11-02,Santos
+CL-00005,Tatiane Duarte,557.924.991-87,tatiane.duarte87@exemplo.test,(11) 93194-6131,1998-02-08,Campinas
+CL-00006,João Duarte,252.866.929-15,joao.duarte50@exemplo.test,(11) 97931-4043,1965-01-07,Jundiaí
+CL-00007,Samuel Ferraz,827.422.579-18,samuel.ferraz7@exemplo.test,(11) 96882-1157,1965-03-16,Campinas
+CL-00008,Gabriela Nogueira,887.676.772-07,gabriela.nogueira11@exemplo.test,(11) 91505-4613,1982-06-23,São Paulo
+CL-00009,Isabela Hirata,842.797.881-20,isabela.hirata74@exemplo.test,(11) 92871-5389,1959-12-16,Osasco
+CL-00010,Samuel Barbosa,783.613.407-50,samuel.barbosa34@exemplo.test,(11) 96711-2425,1969-04-16,São Paulo
+CL-00011,Heitor Gomes,959.629.233-16,heitor.gomes8@exemplo.test,(11) 96747-9720,1983-06-19,Sorocaba
+CL-00012,Samuel Ferraz,544.948.126-84,samuel.ferraz8@exemplo.test,(11) 95543-3078,1996-10-10,Campinas
+CL-00013,Elisa Lacerda,367.294.667-23,elisa.lacerda10@exemplo.test,(11) 92525-7600,1962-06-04,Jundiaí
+CL-00014,Isabela Moura,775.901.751-02,isabela.moura69@exemplo.test,(11) 97516-4568,1970-02-19,Campinas
+CL-00015,Paulo Iglesias,545.892.975-66,paulo.iglesias88@exemplo.test,(11) 91793-1752,1999-10-01,Jundiaí
+CL-00016,Olívia Almeida,127.706.324-93,olivia.almeida21@exemplo.test,(11) 95489-2529,1976-05-06,Osasco
+CL-00017,Carla Moura,206.436.110-37,carla.moura28@exemplo.test,(11) 98812-2276,1996-10-10,Sorocaba
+CL-00018,Heitor Queiroz,005.162.713-26,heitor.queiroz50@exemplo.test,(11) 92463-2678,1999-06-04,Osasco
+CL-00019,Lucas Jardim,262.218.909-50,lucas.jardim84@exemplo.test,(11) 93688-8210,1977-03-05,Jundiaí
+CL-00020,Gabriela Esteves,697.311.219-60,gabriela.esteves94@exemplo.test,(11) 97291-6759,1970-02-27,Osasco
+CL-00021,Elisa Hirata,413.899.940-07,elisa.hirata85@exemplo.test,(11) 95942-4366,1962-03-26,Sorocaba
+CL-00022,Renata Gomes,640.376.137-43,renata.gomes82@exemplo.test,(11) 92163-9655,2007-08-07,Osasco
+CL-00023,Karina Esteves,696.582.710-65,karina.esteves76@exemplo.test,(11) 92106-1225,1985-02-27,Campinas
+CL-00024,Bruno Barbosa,684.866.618-11,bruno.barbosa69@exemplo.test,(11) 93501-5546,2001-03-07,Osasco
+CL-00025,Carla Gomes,285.691.463-29,carla.gomes8@exemplo.test,(11) 95005-2412,1969-09-13,São Paulo
+CL-00026,Olívia Barbosa,421.020.275-46,olivia.barbosa67@exemplo.test,(11) 99474-5247,1993-09-13,Osasco
+CL-00027,Elisa Iglesias,105.648.149-89,elisa.iglesias81@exemplo.test,(11) 92262-9128,1967-11-05,Sorocaba
+CL-00028,Lucas Barbosa,792.524.191-87,lucas.barbosa30@exemplo.test,(11) 99336-1042,2004-09-23,São Paulo
+CL-00029,Heitor Barbosa,756.220.863-88,heitor.barbosa42@exemplo.test,(11) 95067-7819,1979-12-24,Osasco
+CL-00030,Carla Moura,180.238.061-22,carla.moura60@exemplo.test,(11) 95625-6090,1979-04-27,São Paulo
+CL-00031,Samuel Queiroz,053.494.937-10,samuel.queiroz48@exemplo.test,(11) 99083-4201,1959-08-25,Campinas
+CL-00032,Elisa Almeida,603.850.506-74,elisa.almeida95@exemplo.test,(11) 96038-2703,1990-04-10,Sorocaba
+CL-00033,Heitor Pacheco,702.410.386-85,heitor.pacheco90@exemplo.test,(11) 97102-8511,2001-01-23,Sorocaba
+CL-00034,Diego Esteves,619.906.234-50,diego.esteves34@exemplo.test,(11) 96161-7438,1979-05-31,Osasco
+CL-00035,Olívia Iglesias,313.291.212-36,olivia.iglesias58@exemplo.test,(11) 98635-6145,1972-03-18,São Paulo
+CL-00036,Samuel Moura,374.741.124-00,samuel.moura91@exemplo.test,(11) 91660-4522,1979-04-10,Campinas
+CL-00037,Carla Hirata,568.044.206-08,carla.hirata58@exemplo.test,(11) 95093-2551,1967-03-25,São Paulo
+CL-00038,Elisa Duarte,003.236.519-50,elisa.duarte76@exemplo.test,(11) 95240-2228,2006-09-22,São Paulo
+CL-00039,Gabriela Queiroz,215.107.029-89,gabriela.queiroz56@exemplo.test,(11) 97471-9128,2006-01-13,Santos
+CL-00040,Nicolas Ferraz,532.447.209-35,nicolas.ferraz80@exemplo.test,(11) 95026-5835,1963-12-04,Santos
+CL-00041,Samuel Rezende,014.626.383-92,samuel.rezende81@exemplo.test,(11) 99907-1319,1974-05-14,Jundiaí
+CL-00042,Lucas Rezende,875.985.642-48,lucas.rezende4@exemplo.test,(11) 96224-4588,2006-01-19,Osasco
+CL-00043,Bruno Rezende,859.321.334-06,bruno.rezende69@exemplo.test,(11) 91916-4594,1957-01-12,Santos
+CL-00044,Lucas Ferraz,239.559.059-26,lucas.ferraz73@exemplo.test,(11) 93328-4084,1964-07-09,Sorocaba
+CL-00045,João Ferraz,701.039.308-76,joao.ferraz62@exemplo.test,(11) 91011-6435,1953-08-02,Campinas
+CL-00046,Elisa Lacerda,250.029.218-50,elisa.lacerda47@exemplo.test,(11) 92188-7120,1973-03-11,Sorocaba
+CL-00047,Diego Lacerda,452.267.528-30,diego.lacerda89@exemplo.test,(11) 96846-4657,1955-11-05,Campinas
+CL-00048,Mariana Jardim,422.096.902-00,mariana.jardim78@exemplo.test,(11) 96213-4619,1957-12-11,São Paulo
+CL-00049,Paulo Esteves,513.552.157-73,paulo.esteves2@exemplo.test,(11) 95345-4435,1986-04-18,Jundiaí
+CL-00050,Carla Moura,410.067.626-39,carla.moura64@exemplo.test,(11) 97204-6754,1959-09-11,Santos
+CL-00051,Diego Rezende,932.710.405-67,diego.rezende34@exemplo.test,(11) 92715-2215,1978-01-06,Campinas
+CL-00052,Mariana Ferraz,181.599.706-09,mariana.ferraz84@exemplo.test,(11) 93703-8113,1994-08-03,São Paulo
+CL-00053,Diego Lacerda,336.884.443-10,diego.lacerda13@exemplo.test,(11) 91813-7437,1957-05-21,Sorocaba
+CL-00054,Paulo Esteves,050.614.973-09,paulo.esteves13@exemplo.test,(11) 91421-4390,1993-05-10,Jundiaí
+CL-00055,João Cardoso,714.677.418-09,joao.cardoso50@exemplo.test,(11) 94029-7078,1974-06-17,Osasco
+CL-00056,Fábio Queiroz,047.743.490-89,fabio.queiroz20@exemplo.test,(11) 92584-2404,1977-11-02,Sorocaba
+CL-00057,Nicolas Hirata,806.868.793-92,nicolas.hirata61@exemplo.test,(11) 95896-2293,1973-04-06,Jundiaí
+CL-00058,Bruno Esteves,172.233.206-99,bruno.esteves11@exemplo.test,(11) 98133-4308,1952-05-30,Campinas
+CL-00059,Vinícius Iglesias,511.686.854-00,vinicius.iglesias67@exemplo.test,(11) 98506-1202,1952-10-13,Sorocaba
+CL-00060,Renata Pacheco,162.299.911-87,renata.pacheco73@exemplo.test,(11) 92654-5687,1960-08-17,Osasco
+CL-00061,Nicolas Iglesias,679.970.246-97,nicolas.iglesias19@exemplo.test,(11) 97581-1635,1973-03-04,Osasco
+CL-00062,Heitor Barbosa,745.054.447-40,heitor.barbosa90@exemplo.test,(11) 92609-4734,1996-08-16,Osasco
+CL-00063,Olívia Lacerda,469.137.367-54,olivia.lacerda98@exemplo.test,(11) 99462-7126,2003-08-22,Sorocaba
+CL-00064,Fábio Cardoso,486.289.023-76,fabio.cardoso26@exemplo.test,(11) 91944-5087,2005-09-18,Santos
+CL-00065,Bruno Moura,345.786.103-06,bruno.moura48@exemplo.test,(11) 99008-8308,1992-09-30,Santos
+CL-00066,Tatiane Moura,524.140.602-63,tatiane.moura74@exemplo.test,(11) 94511-4626,1988-06-26,Jundiaí
+CL-00067,Gabriela Iglesias,680.072.290-19,gabriela.iglesias29@exemplo.test,(11) 95135-6004,1983-12-23,Santos
+CL-00068,Mariana Moura,743.748.969-45,mariana.moura14@exemplo.test,(11) 91120-9380,1975-02-09,Sorocaba
+CL-00069,Vinícius Jardim,417.154.544-72,vinicius.jardim84@exemplo.test,(11) 95895-4086,1995-03-26,Sorocaba
+CL-00070,Heitor Barbosa,965.207.446-20,heitor.barbosa52@exemplo.test,(11) 97361-1578,1956-05-17,Jundiaí
+CL-00071,Tatiane Gomes,538.758.428-04,tatiane.gomes24@exemplo.test,(11) 95813-2599,1966-06-12,Campinas
+CL-00072,Isabela Ferraz,513.534.655-43,isabela.ferraz34@exemplo.test,(11) 95817-8598,1998-02-11,Santos
+CL-00073,Bruno Cardoso,738.168.460-84,bruno.cardoso20@exemplo.test,(11) 93250-4281,1977-12-09,Santos
+CL-00074,Tatiane Queiroz,252.175.250-96,tatiane.queiroz1@exemplo.test,(11) 98406-5481,1989-11-23,Campinas
+CL-00075,Tatiane Ferraz,712.966.667-60,tatiane.ferraz50@exemplo.test,(11) 91076-1618,1960-10-17,Campinas
+CL-00076,Lucas Almeida,583.003.354-20,lucas.almeida17@exemplo.test,(11) 92682-7284,1963-07-11,Sorocaba
+CL-00077,João Ferraz,104.478.985-90,joao.ferraz56@exemplo.test,(11) 93192-6615,1964-09-14,Osasco
+CL-00078,Gabriela Ferraz,603.323.098-19,gabriela.ferraz22@exemplo.test,(11) 93017-7006,2005-04-30,Santos
+CL-00079,Isabela Barbosa,901.001.676-59,isabela.barbosa16@exemplo.test,(11) 99966-5140,1966-02-13,Jundiaí
+CL-00080,Elisa Gomes,046.184.992-57,elisa.gomes54@exemplo.test,(11) 92718-9381,1953-04-07,São Paulo

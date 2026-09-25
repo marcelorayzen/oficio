@@ -1,0 +1,151 @@
+id_pedido,data,nome_cliente,email_cliente,valor,cidade
+PD-00001,2025-04-10,Bruno Jardim,bruno.jardim15@exemplo.test,270.68,Campinas
+PD-00002,2026-07-08,Mariana Queiroz,mariana.queiroz96@exemplo.test,459.75,Jundiaí
+PD-00003,2026-02-22,Elisa Pacheco,elisa.pacheco63@exemplo.test,316.04,Jundiaí
+PD-00004,2026-01-07,Lucas Gomes,lucas.gomes31@exemplo.test,131.87,Osasco
+PD-00005,2025-10-10,Samuel Moura,nao-informado@aurora.invalid,224.15,Santos
+PD-00006,2025-01-22,Carla Gomes,carla.gomes77@exemplo.test,81.42,Campinas
+PD-00007,2026-07-22,Elisa Gomes,nao-informado@aurora.invalid,242.75,Campinas
+PD-00008,2025-01-03,Heitor Lacerda,heitor.lacerda77@exemplo.test,313.18,Campinas
+PD-00009,2025-01-27,Samuel Iglesias,samuel.iglesias15@exemplo.test,164.01,Osasco
+PD-00010,2025-09-29,Heitor Lacerda,nao-informado@aurora.invalid,83.16,Jundiaí
+PD-00011,2026-04-05,Nicolas Duarte,nicolas.duarte61@exemplo.test,826.46,Sorocaba
+PD-00012,2025-02-14,Tatiane Duarte,tatiane.duarte29@exemplo.test,774.84,Sorocaba
+PD-00013,2025-03-04,João Queiroz,joao.queiroz4@exemplo.test,520.51,Santos
+PD-00014,2025-03-17,Diego Rezende,diego.rezende57@exemplo.test,112.41,Sorocaba
+PD-00015,2026-08-23,Elisa Cardoso,nao-informado@aurora.invalid,591.91,Osasco
+PD-00016,2026-03-17,Mariana Jardim,mariana.jardim78@exemplo.test,131.89,São Paulo
+PD-00017,2026-02-28,Samuel Gomes,samuel.gomes30@exemplo.test,377.58,Santos
+PD-00018,2025-09-19,Nicolas Duarte,nicolas.duarte41@exemplo.test,413.19,Jundiaí
+PD-00019,2025-03-29,Paulo Cardoso,nao-informado@aurora.invalid,125.55,São Paulo
+PD-00020,2026-07-30,Lucas Esteves,lucas.esteves76@exemplo.test,605.42,Jundiaí
+PD-00021,2026-03-10,Diego Pacheco,diego.pacheco86@exemplo.test,768.06,Osasco
+PD-00022,2026-06-04,Vinícius Jardim,vinicius.jardim74@exemplo.test,247.19,Jundiaí
+PD-00023,2026-07-24,Paulo Hirata,paulo.hirata45@exemplo.test,406.14,Osasco
+PD-00024,2026-07-25,Tatiane Hirata,tatiane.hirata72@exemplo.test,56.77,Jundiaí
+PD-00025,2025-11-13,Isabela Almeida,nao-informado@aurora.invalid,377.44,São Paulo
+PD-00026,2025-03-13,Fábio Esteves,fabio.esteves52@exemplo.test,175.94,Jundiaí
+PD-00027,2026-01-21,Ana Cardoso,ana.cardoso28@exemplo.test,459.58,Osasco
+PD-00028,2026-08-05,Fábio Moura,fabio.moura42@exemplo.test,640.10,São Paulo
+PD-00029,2025-03-25,Elisa Ferraz,elisa.ferraz7@exemplo.test,308.56,Jundiaí
+PD-00030,2025-10-07,Nicolas Rezende,nicolas.rezende54@exemplo.test,250.96,Sorocaba
+PD-00031,2026-05-14,Diego Moura,diego.moura37@exemplo.test,569.85,Osasco
+PD-00032,2025-02-26,Bruno Hirata,bruno.hirata77@exemplo.test,37.26,Osasco
+PD-00033,2025-12-02,Gabriela Esteves,gabriela.esteves38@exemplo.test,152.00,Santos
+PD-00034,2026-06-30,Nicolas Ferraz,nao-informado@aurora.invalid,750.29,Sorocaba
+PD-00035,2025-02-13,Samuel Moura,nao-informado@aurora.invalid,476.02,Santos
+PD-00036,2026-02-19,Carla Lacerda,carla.lacerda74@exemplo.test,756.81,Santos
+PD-00037,2025-06-25,João Duarte,joao.duarte42@exemplo.test,850.79,Santos
+PD-00038,2025-09-07,Lucas Cardoso,lucas.cardoso14@exemplo.test,476.75,Santos
+PD-00039,2025-12-14,Renata Cardoso,renata.cardoso40@exemplo.test,256.42,Campinas
+PD-00040,2025-12-24,Carla Duarte,carla.duarte25@exemplo.test,389.93,Jundiaí
+PD-00041,2025-09-20,Elisa Hirata,nao-informado@aurora.invalid,232.22,Sorocaba
+PD-00042,2026-05-21,Elisa Cardoso,nao-informado@aurora.invalid,505.96,Sorocaba
+PD-00043,2025-11-27,Tatiane Queiroz,tatiane.queiroz73@exemplo.test,672.40,Campinas
+PD-00044,2025-11-07,Olívia Cardoso,olivia.cardoso81@exemplo.test,845.35,Sorocaba
+PD-00045,2026-04-18,Bruno Moura,bruno.moura40@exemplo.test,492.04,São Paulo
+PD-00046,2025-04-03,Lucas Jardim,nao-informado@aurora.invalid,659.76,Sorocaba
+PD-00047,2025-02-12,Mariana Queiroz,mariana.queiroz95@exemplo.test,490.73,Jundiaí
+PD-00048,2025-06-04,Gabriela Lacerda,gabriela.lacerda65@exemplo.test,93.57,São Paulo
+PD-00049,2025-02-10,Karina Cardoso,karina.cardoso23@exemplo.test,283.90,Santos
+PD-00050,2026-02-01,Olívia Ferraz,olivia.ferraz37@exemplo.test,448.99,Osasco
+PD-00051,2025-12-09,Vinícius Barbosa,vinicius.barbosa83@exemplo.test,97.42,São Paulo
+PD-00052,2025-06-03,Samuel Nogueira,nao-informado@aurora.invalid,371.10,Sorocaba
+PD-00053,2026-02-06,Elisa Moura,elisa.moura84@exemplo.test,162.76,Jundiaí
+PD-00054,2025-12-03,Carla Jardim,carla.jardim83@exemplo.test,862.16,Jundiaí
+PD-00055,2026-06-05,Renata Cardoso,renata.cardoso55@exemplo.test,400.02,Osasco
+PD-00056,2026-05-13,João Ferraz,joao.ferraz44@exemplo.test,226.28,Campinas
+PD-00057,2025-04-14,Elisa Cardoso,nao-informado@aurora.invalid,549.98,Sorocaba
+PD-00058,2025-05-15,Renata Barbosa,renata.barbosa99@exemplo.test,641.48,Campinas
+PD-00059,2025-06-19,Fábio Ferraz,fabio.ferraz99@exemplo.test,768.56,São Paulo
+PD-00060,2026-03-31,Nicolas Moura,nicolas.moura31@exemplo.test,655.36,Jundiaí
+PD-00061,2026-04-26,Olívia Hirata,olivia.hirata40@exemplo.test,885.24,Osasco
+PD-00062,2026-01-27,Tatiane Queiroz,tatiane.queiroz37@exemplo.test,544.67,Santos
+PD-00063,2025-09-14,Fábio Gomes,fabio.gomes18@exemplo.test,83.82,Santos
+PD-00064,2025-05-08,Lucas Duarte,lucas.duarte67@exemplo.test,321.10,Campinas
+PD-00065,2026-03-24,Isabela Queiroz,isabela.queiroz19@exemplo.test,123.28,Santos
+PD-00066,2026-05-30,Lucas Almeida,lucas.almeida51@exemplo.test,412.30,Santos
+PD-00067,2025-11-23,Carla Moura,nao-informado@aurora.invalid,131.91,Jundiaí
+PD-00068,2025-10-21,Karina Esteves,nao-informado@aurora.invalid,879.60,Jundiaí
+PD-00069,2025-03-23,Elisa Rezende,elisa.rezende1@exemplo.test,49.32,Campinas
+PD-00070,2025-10-23,Elisa Pacheco,nao-informado@aurora.invalid,273.38,São Paulo
+PD-00071,2026-04-14,Bruno Hirata,bruno.hirata80@exemplo.test,94.14,Santos
+PD-00072,2025-09-05,Vinícius Almeida,vinicius.almeida74@exemplo.test,765.18,Osasco
+PD-00073,2026-08-08,Nicolas Almeida,nicolas.almeida31@exemplo.test,456.23,Jundiaí
+PD-00074,2026-06-23,Carla Moura,nao-informado@aurora.invalid,587.64,Sorocaba
+PD-00075,2025-02-14,Samuel Almeida,samuel.almeida61@exemplo.test,680.49,Osasco
+PD-00076,2025-12-20,Isabela Almeida,isabela.almeida9@exemplo.test,276.93,Jundiaí
+PD-00077,2025-12-27,Diego Lacerda,nao-informado@aurora.invalid,589.43,Jundiaí
+PD-00078,2025-07-06,Fábio Queiroz,fabio.queiroz62@exemplo.test,860.17,São Paulo
+PD-00079,2025-02-14,Olívia Barbosa,nao-informado@aurora.invalid,840.25,São Paulo
+PD-00080,2026-04-30,Karina Jardim,karina.jardim70@exemplo.test,289.04,Jundiaí
+PD-00081,2025-12-06,Gabriela Jardim,gabriela.jardim7@exemplo.test,309.15,Osasco
+PD-00082,2025-12-14,Nicolas Nogueira,nicolas.nogueira50@exemplo.test,221.63,Jundiaí
+PD-00083,2025-10-01,Paulo Moura,paulo.moura67@exemplo.test,850.10,Jundiaí
+PD-00084,2026-07-13,Nicolas Cardoso,nicolas.cardoso24@exemplo.test,330.41,São Paulo
+PD-00085,2026-04-02,Carla Lacerda,carla.lacerda40@exemplo.test,647.91,Santos
+PD-00086,2025-12-28,Fábio Queiroz,fabio.queiroz6@exemplo.test,659.55,Osasco
+PD-00087,2026-01-08,Bruno Cardoso,bruno.cardoso52@exemplo.test,555.95,Jundiaí
+PD-00088,2026-03-25,Fábio Almeida,nao-informado@aurora.invalid,65.16,São Paulo
+PD-00089,2025-02-03,Heitor Moura,heitor.moura73@exemplo.test,649.19,Jundiaí
+PD-00090,2025-03-20,Olívia Moura,olivia.moura98@exemplo.test,617.17,Sorocaba
+PD-00091,2025-09-13,Lucas Nogueira,lucas.nogueira36@exemplo.test,146.03,Jundiaí
+PD-00092,2025-05-01,Fábio Rezende,fabio.rezende72@exemplo.test,298.99,Osasco
+PD-00093,2026-05-18,Olívia Gomes,olivia.gomes37@exemplo.test,234.15,Campinas
+PD-00094,2026-04-01,Carla Queiroz,nao-informado@aurora.invalid,119.87,Osasco
+PD-00095,2025-11-04,Lucas Cardoso,lucas.cardoso38@exemplo.test,191.91,Jundiaí
+PD-00096,2025-07-25,Fábio Moura,fabio.moura16@exemplo.test,841.17,Campinas
+PD-00097,2026-01-13,Paulo Almeida,paulo.almeida74@exemplo.test,508.70,Campinas
+PD-00098,2026-02-12,Vinícius Cardoso,nao-informado@aurora.invalid,764.92,Santos
+PD-00099,2025-03-17,Renata Pacheco,renata.pacheco74@exemplo.test,158.40,Jundiaí
+PD-00100,2025-12-19,Carla Queiroz,carla.queiroz67@exemplo.test,161.99,Sorocaba
+PD-00101,2026-03-20,Tatiane Ferraz,tatiane.ferraz17@exemplo.test,544.07,São Paulo
+PD-00102,2025-11-27,Renata Esteves,renata.esteves21@exemplo.test,756.28,Osasco
+PD-00103,2025-07-21,Renata Jardim,renata.jardim33@exemplo.test,680.70,Osasco
+PD-00104,2026-05-30,Elisa Jardim,elisa.jardim12@exemplo.test,686.21,Sorocaba
+PD-00105,2025-12-12,Tatiane Esteves,nao-informado@aurora.invalid,892.72,São Paulo
+PD-00106,2026-08-14,Ana Cardoso,nao-informado@aurora.invalid,301.83,Campinas
+PD-00107,2026-05-25,Tatiane Pacheco,tatiane.pacheco4@exemplo.test,672.69,Osasco
+PD-00108,2026-02-20,João Rezende,nao-informado@aurora.invalid,334.58,São Paulo
+PD-00109,2026-04-21,Bruno Ferraz,bruno.ferraz62@exemplo.test,238.43,Sorocaba
+PD-00110,2025-12-20,Elisa Lacerda,elisa.lacerda41@exemplo.test,438.16,Osasco
+PD-00111,2025-05-06,Renata Duarte,renata.duarte60@exemplo.test,303.57,Campinas
+PD-00112,2026-01-29,Elisa Duarte,nao-informado@aurora.invalid,660.53,Campinas
+PD-00113,2025-11-17,Fábio Lacerda,fabio.lacerda93@exemplo.test,224.97,Campinas
+PD-00114,2026-05-25,Paulo Queiroz,paulo.queiroz40@exemplo.test,53.11,Santos
+PD-00115,2026-08-21,Renata Queiroz,renata.queiroz28@exemplo.test,391.06,São Paulo
+PD-00116,2026-04-27,João Rezende,joao.rezende84@exemplo.test,322.68,São Paulo
+PD-00117,2025-09-28,Diego Pacheco,nao-informado@aurora.invalid,774.46,Santos
+PD-00118,2026-07-30,Lucas Barbosa,lucas.barbosa73@exemplo.test,229.46,Sorocaba
+PD-00119,2026-07-18,João Cardoso,joao.cardoso58@exemplo.test,316.79,Jundiaí
+PD-00120,2025-04-10,Vinícius Duarte,nao-informado@aurora.invalid,433.47,Osasco
+PD-00121,2026-06-06,Samuel Moura,samuel.moura26@exemplo.test,441.64,São Paulo
+PD-00122,2025-12-08,Bruno Barbosa,nao-informado@aurora.invalid,853.60,Sorocaba
+PD-00123,2025-05-24,Olívia Esteves,olivia.esteves66@exemplo.test,365.78,Osasco
+PD-00124,2025-11-03,Fábio Nogueira,fabio.nogueira95@exemplo.test,637.43,Sorocaba
+PD-00125,2026-05-02,Renata Rezende,renata.rezende39@exemplo.test,865.02,Osasco
+PD-00126,2025-11-12,Karina Duarte,karina.duarte75@exemplo.test,845.92,Jundiaí
+PD-00127,2026-08-16,Ana Rezende,nao-informado@aurora.invalid,621.29,Jundiaí
+PD-00128,2026-01-25,Bruno Rezende,nao-informado@aurora.invalid,181.87,Campinas
+PD-00129,2026-03-28,Bruno Duarte,nao-informado@aurora.invalid,351.53,Campinas
+PD-00130,2026-04-28,Nicolas Gomes,nicolas.gomes79@exemplo.test,898.94,Jundiaí
+PD-00131,2025-11-29,Bruno Esteves,bruno.esteves72@exemplo.test,708.61,Sorocaba
+PD-00132,2026-06-30,Mariana Lacerda,mariana.lacerda59@exemplo.test,380.69,Osasco
+PD-00133,2025-09-10,Isabela Rezende,nao-informado@aurora.invalid,315.71,Osasco
+PD-00134,2025-08-01,Heitor Jardim,heitor.jardim91@exemplo.test,736.90,Santos
+PD-00135,2025-10-08,Karina Rezende,karina.rezende93@exemplo.test,324.15,Sorocaba
+PD-00136,2025-12-20,Samuel Nogueira,samuel.nogueira51@exemplo.test,821.18,Osasco
+PD-00137,2025-12-21,Bruno Jardim,bruno.jardim11@exemplo.test,482.83,Osasco
+PD-00138,2026-07-06,Paulo Gomes,nao-informado@aurora.invalid,307.71,Jundiaí
+PD-00139,2026-08-24,Isabela Esteves,nao-informado@aurora.invalid,275.31,São Paulo
+PD-00140,2025-04-13,Renata Hirata,renata.hirata7@exemplo.test,453.42,Jundiaí
+PD-00141,2025-01-06,Paulo Duarte,paulo.duarte18@exemplo.test,593.20,Santos
+PD-00142,2025-10-22,Paulo Rezende,paulo.rezende97@exemplo.test,358.36,Jundiaí
+PD-00143,2026-07-02,Bruno Cardoso,bruno.cardoso30@exemplo.test,786.92,São Paulo
+PD-00144,2025-02-07,Fábio Pacheco,fabio.pacheco23@exemplo.test,886.50,Santos
+PD-00145,2025-11-02,Fábio Jardim,fabio.jardim2@exemplo.test,611.77,São Paulo
+PD-00146,2026-07-11,Karina Jardim,karina.jardim83@exemplo.test,566.63,Campinas
+PD-00147,2025-04-26,Renata Queiroz,nao-informado@aurora.invalid,368.20,Jundiaí
+PD-00148,2025-12-12,Olívia Iglesias,olivia.iglesias2@exemplo.test,839.37,Sorocaba
+PD-00149,2026-02-20,Gabriela Ferraz,gabriela.ferraz82@exemplo.test,876.54,Sorocaba
+PD-00150,2025-07-09,Karina Cardoso,karina.cardoso13@exemplo.test,173.61,Osasco

@@ -1,0 +1,18 @@
+ativo: rh.pesquisa_clima
+descricao: Respostas da pesquisa de clima 2026, anonimizadas.
+sistema: plataforma-dados / schema rh
+dono: Gerência de RH (Beatriz Leal)
+finalidade: Medir clima organizacional por setor.
+anonimizado: true
+tecnica_anonimizacao: "matrícula substituída por sha256(matricula)"
+tags: [rh, pesquisa]
+classificacao: interno          # atribuída pela regra R-11
+acesso: [todos-colaboradores]
+colunas:
+  - {nome: matricula_hash, tipo: texto}
+  - {nome: setor, tipo: texto}
+  - {nome: faixa_etaria, tipo: texto}
+  - {nome: sexo, tipo: texto}
+  - {nome: nota_lideranca, tipo: inteiro}
+  - {nome: nota_ambiente, tipo: inteiro}
+observacao: "Matrículas da Aurora são numéricas e sequenciais, de 1001 em diante."

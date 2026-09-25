@@ -1,0 +1,19 @@
+ativo: produto.catalogo_itens
+descricao: Catálogo de produtos vendidos (SKU, preço, estoque).
+sistema: plataforma-dados / schema produto
+dono: Gerência de Produto (Igor Matos)
+finalidade: Precificação, exposição no site e controle de estoque.
+tags: [produto]
+classificacao: interno
+acesso: [todos-colaboradores]
+colunas:
+  - {nome: sku, tipo: texto}
+  - {nome: descricao, tipo: texto}
+  - {nome: categoria, tipo: texto}
+  - {nome: preco, tipo: decimal}
+  - {nome: estoque, tipo: inteiro}
+qualidade:
+  - {id: Q-30, regra: "preco > 0", status: verde, ultima_execucao: 2026-08-31}
+linhagem:
+  origem: [erp]
+  consumidores: [site, painel_estoque]
