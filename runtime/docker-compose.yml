@@ -1,0 +1,34 @@
+# Ofício — runtime da Fase 1.
+#
+# Uso (a partir da raiz do repositório):
+#   cp runtime/.env.example runtime/.env   # e preencha a chave
+#   docker compose -f runtime/docker-compose.yml up -d --build
+#   ./scripts/rodar-casos.sh
+#
+# Rede própria, sem ligação com o Rayzen.
+services:
+  agente:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: oficio-agente
+    restart: "no"
+    env_file: .env
+    working_dir: /opt/oficio
+    volumes:
+      # O agente enxerga SÓ o que um profissional receberia: a base, as skills e o próprio perfil.
+      # `evals/` (gabaritos) e `ferramentas/` (o gerador comenta onde cada defeito foi plantado)
+      # ficam de fora — ver isso é ver a resposta. O entrypoint confere.
+      - ../base:/opt/oficio/base:ro
+      - ../skills:/opt/oficio/skills:ro
+      # Só `perfil/`, nunca `runtime/` inteiro: lá está o `.env` com a chave do modelo.
+      - ./perfil:/opt/oficio/perfil:ro
+      - estado:/home/oficio/.hermes
+    deploy:
+      resources:
+        limits:
+          cpus: '1.5'
+          memory: 2g
+
+volumes:
+  estado:

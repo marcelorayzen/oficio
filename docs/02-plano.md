@@ -36,7 +36,7 @@ ofícios" em `docs/00-visao.md`.
 **Saída:** gabaritos revisados. Casos que cruzam as trilhas (QA-004 × HU-101, QA-005 ×
 `clientes.cadastro`) são o teste de que os dois ofícios compartilham o mesmo mundo.
 
-## Fase 1 — Um agente, dois ofícios, só leitura
+## Fase 1 — Um agente, dois ofícios, só leitura ← **agora**
 
 - Hermes pinado por commit, **num container próprio** (não o HUB existente do Rayzen).
 - Um perfil `oficio`: `SOUL.md` com os papéis e limites dos dois ofícios, toolsets mínimos (sem
@@ -44,6 +44,19 @@ ofícios" em `docs/00-visao.md`.
 - Carregar `skills/governanca/` e `skills/qa/` no perfil; o agente recebe `base/` montada
   somente-leitura.
 - Os casos das duas trilhas rodam; resultado comparado à resposta esperada.
+
+Estado em 26/09:
+
+- [x] Runtime escrito (`runtime/`): Hermes pinado no mesmo commit do Rayzen, rede própria,
+      gabaritos fora do container (o entrypoint recusa subir se os vir)
+- [x] Executor dos casos (`scripts/rodar-casos.sh`): o agente recebe só o pedido
+- [x] Passo a passo da primeira subida (`docs/03-fase1-runbook.md`), com os cinco pontos que só
+      o boot confirma
+- [ ] Primeira subida conferida (passo 3 do runbook)
+- [ ] Casos rodados e corrigidos
+
+Os gabaritos de QA entram nesta fase **sem** a revisão de Marcelo — decisão dele em 26/09 ("ok
+por hora"). A nota de QA desta rodada é declarada como parcialmente concordância com o Claude.
 
 **Saída:** taxa de acerto medida **por ofício**, com as falhas explicadas — incluindo se o agente
 escolheu a skill certa para o pedido. Incluir casos em que a
@@ -74,7 +87,9 @@ resposta certa é "não há evidência suficiente" — um agente que sempre acha
 
 ## Decisões em aberto
 
-- Onde roda: servidor doméstico (sem GPU) ou outra máquina.
-- Qual modelo de raciocínio o profissional usa, e com qual orçamento mensal.
+- Onde roda: servidor doméstico (sem GPU) ou outra máquina. O compose serve a qualquer uma;
+  a primeira subida decide.
+- Qual modelo de raciocínio o profissional usa, e com qual orçamento mensal. Provisório:
+  `gemini-3-flash-preview`, direto no Google, sem LiteLLM — a Fase 1 mede se basta.
 - Se isto é ferramenta pessoal ou produto (muda a leitura da AGPL do OpenViking e o cuidado com
   dados de terceiros).

@@ -14,8 +14,8 @@ avaliação próprias), juntos no runtime.
 
 ## Estado
 
-Fase 0 — skills, base de teste e casos de avaliação prontos para **governança** e para **QA**.
-**Nada instalado; nenhum agente rodou ainda.**
+Fase 1 — runtime e executor dos casos escritos; **primeira subida pendente**. Nenhum agente
+rodou ainda. Como subir: [`docs/03-fase1-runbook.md`](docs/03-fase1-runbook.md).
 
 | documento | o que responde |
 |---|---|
@@ -26,6 +26,7 @@ Fase 0 — skills, base de teste e casos de avaliação prontos para **governan�
 | [`skills/qa/`](skills/qa/) | as skills do profissional de QA — testabilidade, estratégia, casos de API, bug report |
 | [`base/`](base/) | **Aurora Varejo**, empresa fictícia: catálogo, dados, políticas, pedidos de acesso — e em [`base/qa/`](base/qa/) o contrato da API, histórias e evidências |
 | [`evals/governanca/`](evals/governanca/) · [`evals/qa/`](evals/qa/) | casos com resposta esperada — o agente **nunca** vê estas pastas |
+| [`runtime/`](runtime/) · [`scripts/rodar-casos.sh`](scripts/rodar-casos.sh) | o agente em container (Hermes pinado) e o executor que roda os casos sem mostrar o gabarito |
 | [`fontes/`](fontes/) | skills de terceiros no commit exato, com licença, e o que foi adaptado delas |
 | [`ferramentas/gerar_base.py`](ferramentas/gerar_base.py) | gera `base/dados/` — determinístico, sem dependência |
 
