@@ -14,8 +14,8 @@ ordem, com qual evidência, e o que não pode fazer sem aprovação**.
               ▼
    ┌──────────────────────┐
    │ 1. RUNTIME           │  Hermes: raciocínio, conversa, planejamento, execução
-   │    (um perfil por    │  cada profissional = um perfil isolado
-   │     profissional)    │
+   │    (um agente, os    │  um perfil carrega os ofícios; perfil próprio só
+   │     ofícios juntos)  │  quando as permissões divergirem
    └──────────┬───────────┘
               │
    ┌──────────▼───────────┐
@@ -39,17 +39,34 @@ A camada 3 é a única que ninguém entrega pronta. Runtime, memória e browser 
 mercado; o **workflow profissional** — os 14 passos de avaliar um dataset, o formato da
 evidência, quem aprova o quê — é o que este projeto constrói.
 
+## Um agente, vários ofícios
+
+Decisão de 25/09. Os ofícios (governança, QA) são **separados no desenho** — skills, casos de
+avaliação e nota próprios — e **juntos no runtime**: um perfil do Hermes carrega `skills/governanca/`
+e `skills/qa/`, e a skill é escolhida pelo pedido.
+
+- **Por quê:** o usuário é uma pessoa, com um emprego que será de um ofício ou de outro; e o
+  valor está no cruzamento — QA-005 (exportar CPF para campanha) só é bem respondido por quem
+  enxerga teste e governança ao mesmo tempo. Dois agentes separados não se conversariam.
+- **O que fica separado:** skills e `evals/` por ofício, com taxa de acerto medida por ofício —
+  é assim que se sabe onde o agente erra.
+- **A memória é por empresa, não por ofício.** O que muda de um emprego para outro é o contexto
+  (stack, políticas, glossário), não a profissão.
+- **Quando separar em perfis ou containers:** quando um ofício ganhar ferramenta ou permissão que
+  o outro não deve ter (ex.: QA executando teste num ambiente). Hoje os dois têm o mesmo escopo —
+  leitura, escrita só em rascunho — e o princípio 4 lembra que perfil nem é fronteira de segurança.
+
 ## Anatomia de um profissional
 
-| componente | Governança (piloto) |
-|---|---|
-| papel | avaliar, diagnosticar e propor — nunca decidir política |
-| conhecimento | catálogo, metadados, classificação, qualidade, linhagem, LGPD |
-| skills | `metadata-analysis` · `classification` · `data-quality` · `access-review` · `policy-analysis` · `impact-analysis` · `evidence-generation` |
-| ferramentas | leitura de catálogo/documentos; escrita só em rascunho |
-| **pode** | consultar · analisar · comparar · produzir proposta e evidência |
-| **não pode** | alterar política · conceder acesso · publicar dado sensível · aprovar o próprio trabalho |
-| avaliação | `evals/governanca/` — casos com resposta esperada |
+| componente | Governança | QA |
+|---|---|---|
+| papel | avaliar, diagnosticar e propor — nunca decidir política | analisar, projetar testes e relatar — nunca decidir regra de negócio |
+| conhecimento | catálogo, metadados, classificação, qualidade, linhagem, LGPD | histórias, contratos de API, técnicas de teste, risco, perfil do time |
+| skills | `metadata-analysis` · `classification` · `data-quality` · `access-review` · `policy-analysis` · `impact-analysis` · `evidence-generation` | `analisar-testabilidade` · `estrategia-de-teste` · `casos-de-api` · `relatar-defeito` |
+| ferramentas | leitura de catálogo/documentos; escrita só em rascunho | leitura de histórias, contratos e evidências; escrita só em rascunho |
+| **pode** | consultar · analisar · comparar · produzir proposta e evidência | perguntar ao PO · propor casos, código de teste e massa sintética · redigir bug report |
+| **não pode** | alterar política · conceder acesso · publicar dado sensível · aprovar o próprio trabalho | decidir regra que o PO não decidiu · usar dado de produção · abrir ou fechar ticket · rodar teste em ambiente da empresa |
+| avaliação | `evals/governanca/` — casos com resposta esperada | `evals/qa/` |
 
 ### Formato de saída que o profissional deve produzir
 
