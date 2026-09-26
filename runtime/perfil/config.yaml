@@ -28,6 +28,16 @@ skills:
 plugins:
   enabled: []
 
-agent: {}
+# ── Ferramentas fora ─────────────────────────────────────────────────────────
+#
+# O plano pede o agente sem terminal e sem navegador. Nomes conferidos em `hermes tools list`
+# (25/09), não na doc. `code_execution` e `computer_use` saem junto: são outra porta para o mesmo
+# efeito, e desligar só o terminal com as duas ligadas seria desligar o nome, não a capacidade.
+agent:
+  disabled_toolsets:
+    - terminal
+    - browser
+    - code_execution
+    - computer_use
 
 _config_version: 44
