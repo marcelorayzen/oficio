@@ -1,0 +1,33 @@
+# Ofício — configuração do Hermes (Fase 1).
+#
+# Nenhum segredo aqui: a chave do modelo vem do ambiente (`runtime/.env`, fora do git).
+# Este arquivo é montado somente-leitura: o agente não consegue alterar a própria configuração
+# nem desligar os próprios gates (princípio 3).
+
+# ── Modelo ────────────────────────────────────────────────────────────────────
+#
+# Provedor `lmstudio` = endpoint compatível com OpenAI, apontado por `LM_BASE_URL`/`LM_API_KEY`.
+# É o caminho medido no Rayzen (06/09): `provider` separado de `default`, e as duas variáveis de
+# ambiente — a forma `default: provedor/modelo` sai sem credencial e volta 401.
+#
+# Aqui o endpoint é o compatível-com-OpenAI do próprio Gemini, sem passar pelo LiteLLM do Rayzen
+# (o Ofício não depende do Rayzen). **A PRIMEIRA SUBIDA PRECISA CONFIRMAR** que o Hermes chega ao
+# Gemini por este caminho — ver `docs/03-fase1-runbook.md`, passo 3.
+#
+# `gemini-3-flash-preview`: no Rayzen, os grupos Pro exigiram billing e o Flash respondeu.
+model:
+  default: gemini-3-flash-preview
+  provider: lmstudio
+
+# ── Gates que o agente não pode desligar ─────────────────────────────────────
+memory:
+  write_approval: true
+skills:
+  write_approval: true
+
+plugins:
+  enabled: []
+
+agent: {}
+
+_config_version: 44
