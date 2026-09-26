@@ -28,9 +28,13 @@ WORKDIR /home/oficio
 
 # Mesmo commit que o Rayzen usa em produção — a versão cujo schema de config (44) já foi migrado
 # e conferido. Para atualizar: troque o SHA, rebuild, rode `hermes config check`.
+#
+# O INSTALADOR vem do mesmo commit, não de `hermes-agent.nousresearch.com/install.sh`: aquele é
+# sempre o mais novo, e em 25/09 passou a exigir um módulo `pm/` que este commit não tem — o build
+# falhou com `No module named 'pm'`. Pinar o código e não o script que o instala é pin pela metade.
 ARG HERMES_COMMIT=422bc9bde9d212ab3741fbc45a871a3938436d59
-RUN curl -fsSL https://hermes-agent.nousresearch.com/install.sh | bash -s -- \
-      --commit "${HERMES_COMMIT}" --dir /opt/hermes/agent
+RUN curl -fsSL "https://raw.githubusercontent.com/NousResearch/hermes-agent/${HERMES_COMMIT}/scripts/install.sh" \
+      | bash -s -- --commit "${HERMES_COMMIT}" --dir /opt/hermes/agent
 
 ENV PATH="/home/oficio/.local/bin:${PATH}"
 
