@@ -38,8 +38,10 @@ O que a subida mudou, cada um em commit:
 
 1. Memória pendente `3cad3c7f` (o 007 tentou gravar). Rejeitar à mão, no chat interativo — a
    interface não aceita comando por stdin.
-2. Rodar os 14 casos: com o modelo provisório (marcado assim) ou depois da chave do Gemini.
-   Primeira rodada: `governanca/007` → **falha** (`resultados/2026-09-27_2220/NOTAS.md`).
+2. Rodar os 14 casos. `governanca/007` → **falha** com o provisório (`resultados/2026-09-27_2220`)
+   e **falha** com `gemini-3.8-flash` (`resultados/2026-09-28_1912`), pelo mesmo motivo: melhoria
+   virou achado, correção e aprovador. Dois modelos, mesma falha → ajustar `avaliar-ativo` antes
+   de seguir. O 007 gastou 14 requisições; no free tier (~20/dia) cabe um caso por dia.
 
 **No Windows:** rode os comandos `docker exec … /opt/...` com `MSYS_NO_PATHCONV=1`, senão o Git Bash
 troca o caminho por um do Windows.
