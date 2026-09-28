@@ -3,20 +3,44 @@
 Um agente, os dois ofícios, só leitura. A saída da fase é a **taxa de acerto por ofício**, com as
 falhas explicadas.
 
-## O que já está pronto e o que falta confirmar
+## Estado em 27/09
 
-Os arquivos de `runtime/` reaproveitam a receita do Hermes que roda no Rayzen: o mesmo commit
-fixado, o mesmo schema de config (44) e as mesmas lições (link em vez de bind de arquivo, Node fora
-do volume, gates de escrita ligados). **Nada disso foi executado ainda neste repositório.** Cinco
-pontos não puderam ser verificados sem subir, e o passo 3 existe para eles:
+Subido e medido numa máquina Windows (Docker Desktop, Git Bash). Os cinco pontos que só se
+confirmavam subindo:
 
-| ponto | por que é dúvida |
+| ponto | resultado |
 |---|---|
-| o Hermes chega ao Gemini pelo endpoint compatível com OpenAI | no Rayzen ele passa pelo LiteLLM; aqui vai direto, sem dependência do Rayzen |
-| o Hermes enxerga skills em subpasta por ofício (`skills/governanca/<skill>/`) | as skills foram ligadas por ofício para preservar `../referencias/` |
-| como desligar as ferramentas de terminal e navegador | o plano pede o agente sem as duas, e a chave de config não foi conferida — escrever uma chave errada seria config que não vale sem nada acusar |
-| `hermes chat -q` roda sem pedir confirmação para ler arquivos | o executor dos casos não é interativo |
-| a identidade (`SOUL.md`) é carregada | no Rayzen foi provado com uma regra observável; aqui ainda não |
+| o Hermes chega ao Gemini pelo endpoint compatível com OpenAI | ✅ chave aceita; quem respondeu foi o Google (25/09) |
+| o Hermes enxerga skills em subpasta por ofício | ✅ `skills list` mostra as 5 de `governanca` e as 4 de `qa`, com a categoria certa |
+| como desligar terminal e navegador | ✅ `agent.disabled_toolsets`, nomes de `hermes tools list`. Saíram também `code_execution` e `computer_use` |
+| `hermes chat -q` sem pedir confirmação | ✅ o caso 007 leu 18 arquivos sem parar |
+| a identidade (`SOUL.md`) é carregada | ✅ "qual é o seu papel?" devolveu o papel do SOUL, com o "nunca decido política" |
+
+O que a subida mudou, cada um em commit:
+
+- **Instalador pinado** no mesmo commit do código. A URL `hermes-agent.nousresearch.com/install.sh`
+  serve o script mais novo, que passou a exigir um módulo `pm/` ausente no commit pinado.
+- **Skills embutidas desligadas** (`skills.disabled`, 57 nomes): concorriam com as 9 daqui na
+  escolha de skill, que é parte da nota. `hermes-agent` é essencial e fica.
+- **Executor:** `chat -q` sai 0 mesmo com as três tentativas em erro, então a falha é lida na
+  saída; extração do pedido em `awk` (no Windows, `python3` costuma ser o atalho da Store);
+  `MSYS_NO_PATHCONV` para o Git Bash não reescrever `/opt/oficio`.
+- **Modelo provisório** `space-bunny-free` (OpenCode Free): a chave do Gemini batia no limite de 20
+  requisições/dia. Nota tirada com ele não se compara à do Gemini. Como voltar: comentário em
+  `runtime/perfil/config.yaml`.
+
+**Abertos:**
+
+1. Ferramentas que ainda estão ligadas e não cabem num agente só de leitura: `write_file`,
+   `patch`, `web_search`, `web_extract`, `delegate_task`, `cronjob_manage`. Desligar como o
+   terminal — nomes conferidos em `hermes tools list`, por commit.
+2. Memória pendente `3cad3c7f` (o 007 tentou gravar). Rejeitar à mão, no chat interativo — a
+   interface não aceita comando por stdin.
+3. Rodar os 14 casos: com o modelo provisório (marcado assim) ou depois da chave do Gemini.
+   Primeira rodada: `governanca/007` → **falha** (`resultados/2026-09-27_2220/NOTAS.md`).
+
+**No Windows:** rode os comandos `docker exec … /opt/...` com `MSYS_NO_PATHCONV=1`, senão o Git Bash
+troca o caminho por um do Windows.
 
 ## Pré-requisitos
 
