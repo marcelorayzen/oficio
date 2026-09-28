@@ -16,8 +16,13 @@
 # Chave própria do Ofício desde 28/09, ainda free tier (~20 requisições/dia): um caso como o 007
 # pode passar disso. Em 27/09 rodou-se provisoriamente com `space-bunny-free` (`opencode-free`) —
 # o único `*-free` que serve fora do cliente OpenCode; nota dele não se compara à do Gemini.
+#
+# 28/09: `gemini-3-flash-preview` → `gemini-3.8-flash` (estável). O preview devolvia 503 "high
+# demand" em rajada e o 007 morreu duas vezes sem passar do 3º passo. Teste direto no mesmo
+# minuto: 3.8-flash 200; 3.7-flash 503; 2.5-flash 404 ("no longer available to new users", e
+# indica o 3.8). Nota tirada com o 3.8 não se compara à de outro modelo.
 model:
-  default: gemini-3-flash-preview
+  default: gemini-3.8-flash
   provider: lmstudio
 
 # ── Gates que o agente não pode desligar ─────────────────────────────────────
