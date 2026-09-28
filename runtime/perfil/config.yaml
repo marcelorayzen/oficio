@@ -106,11 +106,38 @@ plugins:
 # O plano pede o agente sem terminal e sem navegador. Nomes conferidos em `hermes tools list`
 # (25/09), não na doc. `code_execution` e `computer_use` saem junto: são outra porta para o mesmo
 # efeito, e desligar só o terminal com as duas ligadas seria desligar o nome, não a capacidade.
+#
+# 28/09, o resto do que não cabe num agente só de leitura (toolsets de `hermes tools list`):
+# - `web`, `connections`, `image_gen`, `tts`: saída para serviço externo; a base é tudo que ele tem.
+# - `delegation`, `cronjob`: subagente e tarefa agendada agem fora da resposta que é corrigida.
+# - `session_search`: lê sessões anteriores — um caso veria a resposta de outro, e uma rodada não
+#   pode ensinar a seguinte.
 agent:
   disabled_toolsets:
     - terminal
     - browser
     - code_execution
     - computer_use
+    - web
+    - connections
+    - image_gen
+    - tts
+    - delegation
+    - cronjob
+    - session_search
+
+# `write_file` e `patch` dividem o toolset `file` com a leitura, e o Hermes não desliga ferramenta
+# avulsa. Barradas por hook, pelo nome. O guarda de escrita embutido não serve: ele isenta tudo sob
+# `~/.hermes`, e é lá (memories/, skills/) que uma escrita direta passaria por fora do
+# `write_approval`. `fail_closed`: hook que trava ou erra bloqueia em vez de liberar.
+# `hooks_auto_accept`: sem ele o Hermes pede consentimento no primeiro uso e, sem TTY (`chat -q`),
+# PULA o hook só com um aviso no log — falharia aberto.
+hooks_auto_accept: true
+hooks:
+  pre_tool_call:
+    - matcher: "write_file|patch"
+      command: "sh /opt/oficio/perfil/bloquear-escrita.sh"
+      fail_closed: true
+      timeout: 10
 
 _config_version: 44

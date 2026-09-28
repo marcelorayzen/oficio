@@ -29,14 +29,16 @@ O que a subida mudou, cada um em commit:
   requisições/dia. Nota tirada com ele não se compara à do Gemini. Como voltar: comentário em
   `runtime/perfil/config.yaml`.
 
+- **Só leitura (28/09):** ligados só `file`, `vision`, `skills`, `todo`, `memory`, `clarify`.
+  `write_file` e `patch` dividem o toolset `file` com a leitura e o Hermes não desliga ferramenta
+  avulsa: saem por hook `pre_tool_call` (`perfil/bloquear-escrita.sh`). Testado pedindo ao agente
+  para gravar em `~/.hermes/memories/` — a ferramenta devolveu o erro do hook e nada foi gravado.
+
 **Abertos:**
 
-1. Ferramentas que ainda estão ligadas e não cabem num agente só de leitura: `write_file`,
-   `patch`, `web_search`, `web_extract`, `delegate_task`, `cronjob_manage`. Desligar como o
-   terminal — nomes conferidos em `hermes tools list`, por commit.
-2. Memória pendente `3cad3c7f` (o 007 tentou gravar). Rejeitar à mão, no chat interativo — a
+1. Memória pendente `3cad3c7f` (o 007 tentou gravar). Rejeitar à mão, no chat interativo — a
    interface não aceita comando por stdin.
-3. Rodar os 14 casos: com o modelo provisório (marcado assim) ou depois da chave do Gemini.
+2. Rodar os 14 casos: com o modelo provisório (marcado assim) ou depois da chave do Gemini.
    Primeira rodada: `governanca/007` → **falha** (`resultados/2026-09-27_2220/NOTAS.md`).
 
 **No Windows:** rode os comandos `docker exec … /opt/...` com `MSYS_NO_PATHCONV=1`, senão o Git Bash
@@ -87,6 +89,11 @@ docker exec oficio-agente hermes tools --help
 
 # f) a identidade foi carregada
 docker exec oficio-agente hermes chat -q "Em uma frase: qual é o seu papel e quais são seus ofícios?"
+
+# g) a escrita está barrada — o hook aparece como "✓ allowed" depois da primeira chamada de chat
+docker exec oficio-agente hermes hooks list
+docker exec oficio-agente hermes chat -q "Use write_file para gravar 'x' em /tmp/t.md e diga o que a ferramenta devolveu."
+docker exec oficio-agente ls /tmp/t.md                      # deve falhar: o arquivo não existe
 ```
 
 **Me mande a saída de c, d, e, f.** Se algum falhar, o conserto vai em commit — nunca à mão no
