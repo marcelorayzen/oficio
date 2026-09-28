@@ -9,6 +9,8 @@
 #   ./scripts/rodar-casos.sh                 # todos os casos das duas trilhas
 #   ./scripts/rodar-casos.sh governanca/003  # um caso
 #   ./scripts/rodar-casos.sh qa              # uma trilha
+#   MODELO=openai-codex/gpt-6-luna ./scripts/rodar-casos.sh governanca/007
+#                                            # outro modelo só nesta rodada (provedor/modelo)
 #
 # Cada caso roda numa chamada `hermes chat -q` separada, para uma resposta não contaminar a
 # seguinte pela conversa.
@@ -21,7 +23,19 @@ export MSYS_NO_PATHCONV=1
 RAIZ="$(cd "$(dirname "$0")/.." && pwd)"
 CONTAINER="${CONTAINER:-oficio-agente}"
 FILTRO="${1:-}"
-SAIDA="$RAIZ/resultados/$(date +%Y-%m-%d_%H%M)"
+
+# Sem MODELO, vale o `model:` do config.yaml. Com ele, `--provider`/`--model` só nesta chamada —
+# o config não muda, então a rodada seguinte volta ao padrão sem ninguém lembrar de desfazer.
+EXTRA=()
+if [ -n "${MODELO:-}" ]; then
+  [[ "$MODELO" == */* ]] || { echo "MODELO deve ser provedor/modelo (ex.: openai-codex/gpt-6-luna)" >&2; exit 1; }
+  EXTRA=(--provider "${MODELO%%/*}" --model "${MODELO#*/}")
+else
+  MODELO="$(awk '/^model:/ {m=1; next} m && /^[^ #]/ {exit} m && $1=="provider:" {p=$2} m && $1=="default:" {d=$2} END {print p "/" d}' "$RAIZ/runtime/perfil/config.yaml")"
+fi
+
+# O modelo vai no nome da pasta: nota de um modelo não se compara à de outro.
+SAIDA="$RAIZ/resultados/$(date +%Y-%m-%d_%H%M)_${MODELO#*/}"
 
 docker inspect -f '{{.State.Running}}' "$CONTAINER" 2>/dev/null | grep -q true || {
   echo "container $CONTAINER não está rodando — suba com: docker compose -f runtime/docker-compose.yml up -d --build" >&2
@@ -30,7 +44,6 @@ docker inspect -f '{{.State.Running}}' "$CONTAINER" 2>/dev/null | grep -q true |
 
 mkdir -p "$SAIDA"
 VERSAO="$(docker exec "$CONTAINER" hermes --version 2>/dev/null | head -1 || echo desconhecida)"
-MODELO="$(grep -E '^\s+default:' "$RAIZ/runtime/perfil/config.yaml" | head -1 | awk '{print $2}')"
 
 # Extrai o bloco citado logo abaixo de "## Pedido ao agente".
 #
@@ -80,7 +93,7 @@ for arquivo in "$RAIZ"/evals/governanca/[0-9]*.md "$RAIZ"/evals/qa/[0-9]*.md; do
   # modelo falham (medido em 25/09 com HTTP 429). Sem esta checagem, erro de cota entraria na
   # correção como resposta do agente — e viraria "falha" de raciocínio. A marca é a ÚLTIMA
   # tentativa (`attempt N/N`): falhar a primeira e acertar a segunda é resposta válida.
-  if ! docker exec -w /opt/oficio "$CONTAINER" hermes chat -q "$pedido" >> "$destino" 2>&1 \
+  if ! docker exec -w /opt/oficio "$CONTAINER" hermes chat "${EXTRA[@]}" -q "$pedido" >> "$destino" 2>&1 \
      || grep -qE 'API call failed \(attempt ([0-9]+)/\1\)' "$destino"; then
     falhas=$((falhas+1))
     echo "  ✗ a chamada ao modelo falhou — não corrigir, rodar de novo. Ver $destino" >&2
