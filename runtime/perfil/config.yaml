@@ -118,6 +118,10 @@ auxiliary:
 # - `session_search`: lê sessões anteriores — um caso veria a resposta de outro, e uma rodada não
 #   pode ensinar a seguinte.
 agent:
+  # O `gemini-3-flash-preview` devolve 503 "high demand" em rajada (28/09: o 007 morreu no 2º passo
+  # com as 3 tentativas padrão, esperas de ~2s e ~5s). Com 6 a espera dobra até ~80s — uns 3 min
+  # por chamada antes de desistir. Caso que morre assim não é corrigido: roda de novo.
+  api_max_retries: 6
   disabled_toolsets:
     - terminal
     - browser
