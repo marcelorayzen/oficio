@@ -11,13 +11,23 @@
 # ambiente — a forma `default: provedor/modelo` sai sem credencial e volta 401.
 #
 # Aqui o endpoint é o compatível-com-OpenAI do próprio Gemini, sem passar pelo LiteLLM do Rayzen
-# (o Ofício não depende do Rayzen). **A PRIMEIRA SUBIDA PRECISA CONFIRMAR** que o Hermes chega ao
-# Gemini por este caminho — ver `docs/03-fase1-runbook.md`, passo 3.
+# (o Ofício não depende do Rayzen). Confirmado em 25/09: o Hermes chega ao Gemini por este caminho.
 #
-# `gemini-3-flash-preview`: no Rayzen, os grupos Pro exigiram billing e o Flash respondeu.
+# ── PROVISÓRIO (27/09): OpenCode Free, até a chave do Gemini resolver ────────
+#
+# A chave usada no Gemini batia no limite de 20 requisições/dia do free tier. Enquanto isso, o
+# `opencode-free` do Hermes (sem chave, `opencode.ai/zen`). Dos 11 `*-free` do catálogo, só
+# `space-bunny-free` serve fora do cliente OpenCode — medido com os cabeçalhos do próprio Hermes:
+# 200, chamou a ferramenta, sem `<think>` no texto. Os outros: 403 "free tier can only be used from
+# within OpenCode" (7), 400 indisponível (1), 500 (2).
+#
+# **Nota tirada com este modelo NÃO se compara à do Gemini** — é outro modelo, de identidade não
+# declarada. O executor grava o modelo em cada resposta; corrigir separado.
+#
+# Para voltar: `default: gemini-3-flash-preview` e `provider: lmstudio`.
 model:
-  default: gemini-3-flash-preview
-  provider: lmstudio
+  default: space-bunny-free
+  provider: opencode-free
 
 # ── Gates que o agente não pode desligar ─────────────────────────────────────
 memory:
