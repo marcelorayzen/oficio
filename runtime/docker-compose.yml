@@ -23,6 +23,8 @@ services:
       - ../skills:/opt/oficio/skills:ro
       # Só `perfil/`, nunca `runtime/` inteiro: lá está o `.env` com a chave do modelo.
       - ./perfil:/opt/oficio/perfil:ro
+      # MCP de leitura das amostras (Fase 2) — só o código; os dados vêm da montagem de `base/`.
+      - ./mcp:/opt/oficio/mcp:ro
       - estado:/home/oficio/.hermes
     deploy:
       resources:

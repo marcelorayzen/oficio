@@ -97,6 +97,20 @@ skills:
 plugins:
   enabled: []
 
+# ── MCP de leitura (Fase 2) ──────────────────────────────────────────────────
+#
+# Conta, filtra e resume os CSVs de `base/dados/` (`runtime/mcp/amostras.py`). Entrou porque,
+# mandado medir, o agente contava lendo e errava 4 de 14 (rodada 2026-09-29_0808). Só leitura:
+# diretório fixo montado `:ro`, nome do ativo conferido contra a listagem. Roda com o Python do
+# próprio Hermes, que já traz o pacote `mcp` — nada a instalar. `sampling` desligado: o servidor
+# não tem por que pedir chamadas ao modelo.
+mcp_servers:
+  amostras:
+    command: /opt/hermes/agent/venv/bin/python
+    args: ["/opt/oficio/mcp/amostras.py"]
+    sampling:
+      enabled: false
+
 # ── Chamadas ao modelo fora da resposta ──────────────────────────────────────
 #
 # Cada uma gasta cota do Gemini (free tier: ~20 requisições/dia) sem entrar na nota.

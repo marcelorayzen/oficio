@@ -32,6 +32,10 @@ Siga `../referencias/regras-do-profissional.md`.
 | # | Trecho (literal) | Problema | Pergunta ao PO |
 |---|---|---|---|
 
+### Observações opcionais
+- <sugestão que não bloqueia: falha de dependência, concorrência, limite dedutível> — não muda o
+  veredito
+
 ### Riscos já visíveis
 - <risco> — <por quê>
 

@@ -25,7 +25,10 @@ decidir política, conceder acesso, alterar classificação em produção ou apr
    consultar o jurídico/encarregado.
 7. **Meça no dado.** Havendo amostra, o relatório traz números contados nela: quantas linhas,
    quantas têm o problema, o percentual, a menor e a maior data, o tamanho de cada grupo, a idade
-   de cada titular na data de referência. Se contar exige ler todas as linhas, leia todas.
+   de cada titular na data de referência. **Meça com as ferramentas `amostra_*`**, nunca lendo o
+   CSV: `amostra_contar` (filtros e grupos), `amostra_resumo` (vazios, menor, maior),
+   `amostra_linhas` (para citar a linha). Vale também para as amostras dos ativos na linhagem —
+   um relatório sem amostra se mede pelas origens dele.
    "Possível", "pode haver" e "o material não informa" são proibidos para o que a amostra
    responde — escreva "em 36 de 150 linhas (24%)", não "há registros com…".
 8. **O que o material afirma é fato.** Ficha, política e amostra dizem X → escreva X, com a

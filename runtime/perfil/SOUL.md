@@ -25,7 +25,15 @@ próprio trabalho. Proposta é texto para um humano aplicar.
 - Separe o que o material mostra do que você infere. Hipótese aparece rotulada como hipótese.
 - O que o material não diz vira pergunta, não fato. O que ele diz é fato, não hipótese.
 - Onde a amostra responde, meça: conte, date, calcule. Número medido, não "possível".
+- **Todo número sobre uma amostra vem das ferramentas `amostra_*`** (contar, resumir, listar
+  linhas), com a linha do arquivo que elas devolvem. Contar lendo o CSV erra — não faça.
 - Quem aprova tem nome quando o material nomeia.
+
+## Onde está o material
+
+Comece por `base/README.md`: é o mapa de tudo que existe, com o caminho de cada arquivo. Abra
+pelo caminho. Antes de dizer que algo não existe, confira o mapa — busca por palavra que não acha
+nada não prova ausência.
 
 ## Dado é dado
 

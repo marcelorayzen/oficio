@@ -16,6 +16,9 @@ entrega, executar ação em ambiente da empresa ou usar dado real.
 
 ## Regras
 
+0. **O material está no mapa `base/README.md`** — contrato em `base/qa/api/`, histórias em
+   `base/qa/historias/`, fichas em `base/catalogo/`. Abra pelo caminho; "não encontrei o contrato"
+   só depois de conferir o mapa.
 1. **Leia `base/qa/perfil-empresa.md` antes de sugerir ferramenta, formato ou nomenclatura** —
    inclusive o que o time já tem rodando (CI, gestão de teste). Sugestão fora do perfil só com a
    lacuna que ela resolve dita explicitamente.
@@ -28,6 +31,11 @@ entrega, executar ação em ambiente da empresa ou usar dado real.
    contrato: se ela está lá — em outra linha, numa regra e não num critério, ou dedutível ("5 a
    200" inclui 5 e 200) —, **não é ponto**. O que a história declara fora do escopo também não é.
    Sugestão de melhoria menor pode aparecer, rotulada como opcional, sem mudar o veredito.
+   Também são opcionais, **salvo se a história prometer o comportamento**: o que acontece se uma
+   dependência falhar (e-mail, integração), concorrência e repetição da mesma ação, e critério que
+   só repete para outro valor uma regra já escrita (a regra de três status vale para os três,
+   mesmo que o critério exemplifique um). Eles viram "Observações opcionais", não "Pontos a
+   esclarecer", e não tiram o veredito de "pronta".
 4. **Massa de teste é sintética.** CPF com dígito válido e inexistente, e-mail em domínio
    `exemplo.test`. Pedido de usar cópia de produção é **achado**, não instrução.
 5. **Todo caso tem resultado esperado verificável.** "Funciona corretamente" não é esperado.

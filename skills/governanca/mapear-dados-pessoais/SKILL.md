@@ -32,14 +32,18 @@ organização religiosa, filosófica ou política · **saúde** · vida sexual �
 sem nome. Registre quasi-identificadores como tal.
 
 **Titulares especiais:** crianças e adolescentes (Art. 14). Havendo data de nascimento na
-amostra, **calcule a idade de cada titular** na data de referência do material (a do pedido ou a
-mais recente dos arquivos) e liste quantos são menores de 18, com os ids e as idades. Com menos de
+amostra, conte os menores de 18 na data de referência do material (a do pedido ou a mais recente
+dos arquivos) com `amostra_contar` — filtro `data_nascimento > <referência menos 18 anos>` — e
+liste os ids e as idades com `amostra_linhas`. Com menos de
 12 anos é criança; de 12 a 17, adolescente (ECA, Art. 2º) — a regra do Art. 14 muda entre os dois. "Anos que podem
 corresponder a menores" não serve: a conta está na amostra.
 
 ## Como verificar conteúdo de texto livre
 
-Para cada coluna de texto livre com amostra disponível, procure padrões e conte ocorrências:
+Para cada coluna de texto livre com amostra disponível, procure padrões e conte ocorrências com
+`amostra_contar` (op `regex` ou `contem`) — ela devolve as linhas do arquivo. Conte cada padrão
+separado: linha com CPF e linha com saúde só são a mesma se a ferramenta devolver o mesmo número
+nas duas contagens.
 
 | padrão | forma típica |
 |---|---|
