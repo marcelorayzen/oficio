@@ -29,7 +29,15 @@ Um pedido completo tem: quem, qual ativo, **qual finalidade**, por quanto tempo,
 | aprovador | o dono do dado do ativo |
 
 Avalie necessidade (Art. 6º, III): a finalidade declarada precisa **deste** ativo, com **estas**
-colunas? Se uma visão sem as colunas pessoais atende, recomende a visão.
+colunas? Se uma visão sem as colunas pessoais atende, recomende a visão — citando o item da
+política que manda preferi-la — como alternativa a validar, não como decisão.
+
+Devolver é para o solicitante **e** para o gestor que assina o pedido. Confira também se a
+finalidade do pedido cabe na finalidade declarada do ativo na ficha.
+
+A resposta usa as sete seções de `avaliar-ativo`; o veredito (aprovar · devolver · negar) e o
+próximo passo vão em "O que encontrei" e "Qual correção proponho". Aprovador pelo nome do dono na
+ficha.
 
 ## Nunca
 

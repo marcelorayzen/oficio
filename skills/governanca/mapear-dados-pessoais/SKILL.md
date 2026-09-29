@@ -31,8 +31,11 @@ organização religiosa, filosófica ou política · **saúde** · vida sexual �
 **Atenção a combinações:** CEP + data de nascimento + sexo juntos podem identificar alguém mesmo
 sem nome. Registre quasi-identificadores como tal.
 
-**Titulares especiais:** crianças e adolescentes (Art. 14) — marque se a data de nascimento ou o
-contexto indicar menores.
+**Titulares especiais:** crianças e adolescentes (Art. 14). Havendo data de nascimento na
+amostra, **calcule a idade de cada titular** na data de referência do material (a do pedido ou a
+mais recente dos arquivos) e liste quantos são menores de 18, com os ids e as idades. Com menos de
+12 anos é criança; de 12 a 17, adolescente (ECA, Art. 2º) — a regra do Art. 14 muda entre os dois. "Anos que podem
+corresponder a menores" não serve: a conta está na amostra.
 
 ## Como verificar conteúdo de texto livre
 

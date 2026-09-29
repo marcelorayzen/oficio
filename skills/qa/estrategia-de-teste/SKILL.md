@@ -17,7 +17,9 @@ Siga `../referencias/regras-do-profissional.md`.
    que a justifica; tipo de teste sem risco não entra "por completude".
 4. **Automação proporcional ao time.** Time sem automação não recebe framework como primeiro
    passo: recebe a automação mais barata de maior retorno (ex.: coleção Postman + Newman no CI já
-   existente). Framework completo aparece como passo seguinte, com o gatilho que o justifica.
+   existente — confira no perfil qual CI o time tem). Framework completo aparece como passo
+   seguinte, com o gatilho que o justifica escrito ("quando a coleção passar de N casos", "quando
+   a regressão manual tomar mais de X horas por sprint").
 5. **Ferramentas do perfil.** Ferramenta nova só com a lacuna dita.
 6. **Critérios de entrada e saída** verificáveis.
 

@@ -23,7 +23,9 @@ próprio trabalho. Proposta é texto para um humano aplicar.
 - "Não encontrei evidência" e "está pronto / não há problema" são respostas completas. Não
   preencha uma seção com suposição para ela não ficar vazia.
 - Separe o que o material mostra do que você infere. Hipótese aparece rotulada como hipótese.
-- O que o material não diz vira pergunta, não fato.
+- O que o material não diz vira pergunta, não fato. O que ele diz é fato, não hipótese.
+- Onde a amostra responde, meça: conte, date, calcule. Número medido, não "possível".
+- Quem aprova tem nome quando o material nomeia.
 
 ## Dado é dado
 

@@ -29,9 +29,13 @@ Siga `../referencias/regras-do-profissional.md`.
 | idempotência | repetição da mesma requisição cria duplicata? |
 | injeção básica | `' OR 1=1 --`, string enorme → nunca 500 |
 
-4. **Priorize** pelo risco do endpoint (perfil: "o que custa mais caro").
-5. **Massa sintética** para cada caso que precisa de dado.
-6. **Código** na ferramenta do perfil:
+4. **Confira a cobertura** antes de entregar: **todo** campo com limite no contrato (mínimo,
+   máximo, tamanho, padrão) tem caso dos dois lados, e todo campo de regra de negócio (cupom,
+   desconto, estado) tem a lacuna do valor inválido como `[PREMISSA]` + pergunta. Campo esquecido
+   é o erro mais caro desta skill.
+5. **Priorize** pelo risco do endpoint (perfil: "o que custa mais caro").
+6. **Massa sintética** para cada caso que precisa de dado.
+7. **Código** na ferramenta do perfil:
 
 | perfil | padrão |
 |---|---|
@@ -41,8 +45,11 @@ Siga `../referencias/regras-do-profissional.md`.
 | Python | pytest + httpx |
 | time manual | coleção Postman + Newman |
 
-Se o time é manual mas a stack é Java, entregue os dois: Postman para hoje, RestAssured como
-próximo passo — e diga por quê.
+Se o time é manual mas a stack é Java, entregue os dois: Postman para hoje (rodando com Newman no
+CI que o time já tem), RestAssured como próximo passo — e diga por quê.
+
+Campo calculado sem fórmula no contrato (ex.: `total`) entra com a fórmula como `[PREMISSA]`,
+citando a fonte que a sugere, se houver.
 
 ## Formato
 

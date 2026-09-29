@@ -45,6 +45,10 @@ Cenário: …
 - Critério sugerido é sugestão para o PO. Ele **não resolve** a ambiguidade: o valor que o PO não
   deu aparece como `<valor a definir>`, nunca como número escolhido por você.
 - História boa recebe "pronta". Sugestões menores entram rotuladas como opcionais, sem virar
-  "ponto a esclarecer".
+  "ponto a esclarecer". Cada ponto passa pelo teste da regra 3 de
+  `../referencias/regras-do-profissional.md`: a história já responde em algum lugar? Então sai.
+- Critério sugerido para uma regra que a história **já define** usa o valor dela (ex.: o status
+  que ela promete), nunca `<a definir>`.
+- Aponte como ambíguo só o que é ambíguo: regra clara não entra na tabela para ela parecer cheia.
 - Se a história envolve dado pessoal, o problema de governança é **achado de testabilidade**:
   sem finalidade e controle de acesso definidos, não há resultado esperado para testar.
