@@ -74,6 +74,14 @@ se o valor que ela aceita é **informação** ou **preenchimento**: uma regra "e
 com `nao-informado@...`, uma regra "CPF preenchido" passa com `000.000.000-00`. Quando os dados
 estiverem disponíveis, conte quantas linhas satisfazem a regra só por preenchimento.
 
+### Passo 8 — linhagem: a origem cobre o período?
+
+Para cada ativo na linhagem que tem amostra, meça com `amostra_resumo` a **menor e a maior data**
+da coluna de data. Compare com o período que o consumidor apresenta ("receita de 2026", "pedidos
+do ano"): a origem registrada cobre? Entre uma origem que termina e a substituta que começa, há
+buraco? Origem depreciada tem data de exclusão? "Atualizado em" do consumidor não é a data dos
+dados que ele lê.
+
 ## Formato do relatório
 
 Sempre estas sete seções, nesta ordem — também quando o pedido é um pedido de acesso ou traz

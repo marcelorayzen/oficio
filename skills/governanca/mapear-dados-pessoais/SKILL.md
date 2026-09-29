@@ -40,10 +40,16 @@ corresponder a menores" não serve: a conta está na amostra.
 
 ## Como verificar conteúdo de texto livre
 
-Para cada coluna de texto livre com amostra disponível, procure padrões e conte ocorrências com
-`amostra_contar` (op `regex` ou `contem`) — ela devolve as linhas do arquivo. Conte cada padrão
-separado: linha com CPF e linha com saúde só são a mesma se a ferramenta devolver o mesmo número
-nas duas contagens.
+Dois passos, nesta ordem:
+
+1. **Leia a coluna inteira** com `amostra_linhas` (só a coluna de texto livre e a de id, até 200
+   linhas). É lendo que aparece o que ninguém pensaria em filtrar: um termo de saúde fora da lista
+   abaixo, um texto dirigido a você mandando mudar a classificação. Filtro só acha o que você já
+   sabia procurar.
+2. **Conte com `amostra_contar`** (op `regex` ou `contem`) cada padrão que a leitura mostrou —
+   ela devolve as linhas do arquivo. Monte o filtro com os termos que você **leu** na coluna, não
+   só com os da tabela. Conte cada padrão separado: linha com CPF e linha com saúde só são a mesma
+   se a ferramenta devolver o mesmo número nas duas contagens.
 
 | padrão | forma típica |
 |---|---|
