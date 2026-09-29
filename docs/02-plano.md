@@ -36,7 +36,7 @@ ofícios" em `docs/00-visao.md`.
 **Saída:** gabaritos revisados. Casos que cruzam as trilhas (QA-004 × HU-101, QA-005 ×
 `clientes.cadastro`) são o teste de que os dois ofícios compartilham o mesmo mundo.
 
-## Fase 1 — Um agente, dois ofícios, só leitura
+## Fase 1 — Um agente, dois ofícios, só leitura ← **agora**
 
 - Hermes pinado por commit, **num container próprio** (não o HUB existente do Rayzen).
 - Um perfil `oficio`: `SOUL.md` com os papéis e limites dos dois ofícios, toolsets mínimos (sem
@@ -45,11 +45,38 @@ ofícios" em `docs/00-visao.md`.
   somente-leitura.
 - Os casos das duas trilhas rodam; resultado comparado à resposta esperada.
 
+Estado em 26/09:
+
+- [x] Runtime escrito (`runtime/`): Hermes pinado no mesmo commit do Rayzen, rede própria,
+      gabaritos fora do container (o entrypoint recusa subir se os vir)
+- [x] Executor dos casos (`scripts/rodar-casos.sh`): o agente recebe só o pedido
+- [x] Passo a passo da primeira subida (`docs/03-fase1-runbook.md`), com os cinco pontos que só
+      o boot confirma
+- [x] Primeira subida conferida (passo 3 do runbook) — 27/09, os cinco pontos
+- [x] Casos rodados e corrigidos — 5 rodadas completas com `gpt-6-luna`, notas em `resultados/`
+- [ ] **Generalização:** nos 14 casos em que as skills foram ajustadas, 0/7/7 → 6/6/2
+      (acerto/parcial/falha); nos 4 casos novos, que o agente nunca viu, **1/0/3**. As falhas
+      novas têm uma forma só: o agente entrega o artefato que o pedido nomeia mesmo quando a
+      própria análise diz o contrário. Ajuste feito olhando estes 4 os contamina — medir de novo
+      exige outro lote novo.
+
+Por ofício, rodada `2026-09-29_1104`:
+
+| | acerto | parcial | falha |
+|---|---|---|---|
+| governança, 8 antigos | 4 | 4 | 0 |
+| QA, 6 antigos | 2 | 2 | 2 |
+| governança, 2 novos | 0 | 0 | 2 |
+| QA, 2 novos | 1 | 0 | 1 |
+
+Os gabaritos de QA entram nesta fase **sem** a revisão de Marcelo — decisão dele em 26/09 ("ok
+por hora"). A nota de QA desta rodada é declarada como parcialmente concordância com o Claude.
+
 **Saída:** taxa de acerto medida **por ofício**, com as falhas explicadas — incluindo se o agente
 escolheu a skill certa para o pedido. Incluir casos em que a
 resposta certa é "não há evidência suficiente" — um agente que sempre acha algo não passa.
 
-## Fase 2 — Ferramentas de leitura
+## Fase 2 — Ferramentas de leitura ← começada (`4cc7a95`: MCP de leitura das amostras)
 
 - MCP de leitura para as fontes do domínio (documentos, catálogo de teste).
 - Casos novos que exigem consultar a ferramenta em vez de responder de memória.
@@ -74,7 +101,10 @@ resposta certa é "não há evidência suficiente" — um agente que sempre acha
 
 ## Decisões em aberto
 
-- Onde roda: servidor doméstico (sem GPU) ou outra máquina.
-- Qual modelo de raciocínio o profissional usa, e com qual orçamento mensal.
+- Onde roda: servidor doméstico (sem GPU) ou outra máquina. O compose serve a qualquer uma;
+  a primeira subida decide.
+- Qual modelo de raciocínio o profissional usa, e com qual orçamento mensal. O config aponta
+  `gemini-3.8-flash` (chave própria); as rodadas completas usaram `gpt-6-luna` via `openai-codex`,
+  escolhido por rodada no executor. Ainda sem decisão de qual fica nem de custo.
 - Se isto é ferramenta pessoal ou produto (muda a leitura da AGPL do OpenViking e o cuidado com
   dados de terceiros).

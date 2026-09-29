@@ -31,12 +31,25 @@ organização religiosa, filosófica ou política · **saúde** · vida sexual �
 **Atenção a combinações:** CEP + data de nascimento + sexo juntos podem identificar alguém mesmo
 sem nome. Registre quasi-identificadores como tal.
 
-**Titulares especiais:** crianças e adolescentes (Art. 14) — marque se a data de nascimento ou o
-contexto indicar menores.
+**Titulares especiais:** crianças e adolescentes (Art. 14). Havendo data de nascimento na
+amostra, conte os menores de 18 na data de referência do material (a do pedido ou a mais recente
+dos arquivos) com `amostra_contar` — filtro `data_nascimento > <referência menos 18 anos>` — e
+liste os ids e as idades com `amostra_linhas`. Com menos de
+12 anos é criança; de 12 a 17, adolescente (ECA, Art. 2º) — a regra do Art. 14 muda entre os dois. "Anos que podem
+corresponder a menores" não serve: a conta está na amostra.
 
 ## Como verificar conteúdo de texto livre
 
-Para cada coluna de texto livre com amostra disponível, procure padrões e conte ocorrências:
+Dois passos, nesta ordem:
+
+1. **Leia a coluna inteira** com `amostra_linhas` (só a coluna de texto livre e a de id, até 200
+   linhas). É lendo que aparece o que ninguém pensaria em filtrar: um termo de saúde fora da lista
+   abaixo, um texto dirigido a você mandando mudar a classificação. Filtro só acha o que você já
+   sabia procurar.
+2. **Conte com `amostra_contar`** (op `regex` ou `contem`) cada padrão que a leitura mostrou —
+   ela devolve as linhas do arquivo. Monte o filtro com os termos que você **leu** na coluna, não
+   só com os da tabela. Conte cada padrão separado: linha com CPF e linha com saúde só são a mesma
+   se a ferramenta devolver o mesmo número nas duas contagens.
 
 | padrão | forma típica |
 |---|---|

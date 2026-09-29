@@ -43,4 +43,8 @@ Siga `../referencias/regras-do-profissional.md`.
   `Erro no carrinho`.
 - Um defeito por report.
 - Campo obrigatório do perfil que o material não preenche (versão, navegador) fica como
-  pergunta — não como "N/A" nem como valor presumido.
+  pergunta — não como "N/A" nem como valor presumido. Vale também para todo dado de entrada que
+  muda o fluxo e o material não mostra (forma de pagamento, tipo de conta, outro cupom).
+- Severidade com o nome e o critério da escala do perfil, dizendo por que se encaixa.
+- Se a causa provável é uma regra de negócio, procure a história que a define em
+  `base/qa/historias/` e diga se ela deixou o valor indefinido.

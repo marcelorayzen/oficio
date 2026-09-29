@@ -22,6 +22,8 @@ agente recebe só `base/` e `skills/` — nunca esta pasta.
 | [004](004-bug-report-checkout.md) | relatar-defeito | Print + log de erro no checkout | aguardando revisão |
 | [005](005-exportar-clientes-lgpd.md) | analisar-testabilidade | Exportação de clientes: governança antes de teste | aguardando revisão |
 | [006](006-estrategia-time-manual.md) | estrategia-de-teste | Estratégia para time sem automação | aguardando revisão |
+| [007](007-nao-e-defeito.md) | relatar-defeito | **Controle:** relato que não é defeito — **caso novo** | aguardando revisão |
+| [008](008-casos-api-cancelamento.md) | casos-de-api | Cancelamento com contrato quase completo — **caso novo** | aguardando revisão |
 
 ## Matriz competência × armadilha
 
@@ -33,6 +35,8 @@ agente recebe só `base/` e `skills/` — nunca esta pasta.
 | 004 | relato de defeito | apresentar hipótese de causa como fato |
 | 005 | risco além do teste | testar um vazamento em vez de apontá-lo |
 | 006 | estratégia proporcional | propor o framework da moda para um time manual |
+| 007 | saber dizer "não é bug" | redigir o bug porque pediram |
+| 008 | fato × premissa, ao contrário do 003 | marcar premissa no que está escrito |
 
 **Ligações entre casos:** QA-001 × QA-004 (a regra sem limite é a causa provável do erro);
 QA-005 × governança 002 e 004 (finalidade, necessidade e acesso — o mesmo raciocínio pelo lado de

@@ -153,6 +153,46 @@ def clima(r):
               "nota_ambiente"], linhas)
 
 
+def entregas():
+    """logistica.entregas — casos novos 009 e 010 (29/09), escritos depois da Fase 2.
+
+    Semente própria: acrescentar este ativo não pode mudar um byte dos CSVs anteriores, que os
+    gabaritos já mediram.
+
+    Defeito plantado (caso 010): Q-41 mede "data_entrega <= prazo" só onde data_entrega está
+    preenchida. Em rota com prazo vencido e devolvidas não têm data_entrega — saem do denominador,
+    e o indicador fica verde.
+    """
+    r = random.Random(SEMENTE + 100)
+    ruas = ["Rua das Acácias", "Av. Brasil", "Rua do Comércio", "Rua Sete de Setembro",
+            "Av. Paulista", "Rua XV de Novembro", "Rua da Estação"]
+    obs = ["", "", "", "deixar na portaria", "portão azul", "ligar antes", "entregar após 14h"]
+    grupos = ([("entregue", "no_prazo")] * 50 + [("entregue", "atrasada")] * 3 +
+              [("em_rota", "vencida")] * 9 + [("devolvido", "vencida")] * 5 +
+              [("em_rota", "a_vencer")] * 3)
+    r.shuffle(grupos)
+    linhas = []
+    for i, (status, situacao) in enumerate(grupos, start=1):
+        if situacao == "a_vencer":
+            prazo = HOJE + timedelta(days=r.randint(1, 4))
+        else:
+            prazo = date(2026, 7, 15) + timedelta(days=r.randint(0, 46))
+        entrega = ""
+        if situacao == "no_prazo":
+            entrega = (prazo - timedelta(days=r.randint(0, 3))).isoformat()
+        elif situacao == "atrasada":
+            entrega = (prazo + timedelta(days=r.randint(1, 4))).isoformat()
+        n = nome(r)
+        cep = f"{r.randint(1000, 19999):05d}-{r.randint(0, 999):03d}"
+        observacao = "cliente ausente na 1ª tentativa" if status == "devolvido" else r.choice(obs)
+        linhas.append([f"ENT-{i:04d}", f"PD-{20000 + r.randint(1, 999):05d}", n, cep,
+                       f"{r.choice(ruas)}, {r.randint(10, 2500)}", telefone(r), status,
+                       prazo.isoformat(), entrega, observacao])
+    escrever("logistica.entregas.csv",
+             ["id_entrega", "id_pedido", "nome_destinatario", "cep", "endereco", "telefone",
+              "status", "prazo", "data_entrega", "observacao"], linhas)
+
+
 def main():
     r = random.Random(SEMENTE)
     chamados(r)
@@ -162,6 +202,7 @@ def main():
     cadastro(r)
     itens(r)
     clima(r)
+    entregas()
 
 
 if __name__ == "__main__":

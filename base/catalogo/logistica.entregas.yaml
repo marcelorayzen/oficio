@@ -1,0 +1,25 @@
+ativo: logistica.entregas
+descricao: Entregas de pedidos do e-commerce, uma linha por entrega.
+sistema: plataforma-dados / schema logistica
+dono: Gerência de Logística (Otávio Prates)
+finalidade: Roteirização, acompanhamento de entregas e atendimento a reclamações de entrega.
+base_legal: execução de contrato (Art. 7º, V)
+tags: [contem_pii, operacional]
+classificacao: confidencial
+acesso: [logistica]
+colunas:
+  - {nome: id_entrega, tipo: texto}
+  - {nome: id_pedido, tipo: texto}
+  - {nome: nome_destinatario, tipo: texto}
+  - {nome: cep, tipo: texto}
+  - {nome: endereco, tipo: texto}
+  - {nome: telefone, tipo: texto}
+  - {nome: status, tipo: texto, valores: [em_rota, entregue, devolvido]}
+  - {nome: prazo, tipo: data}
+  - {nome: data_entrega, tipo: data}
+  - {nome: observacao, tipo: texto, descricao: "Anotação do entregador"}
+qualidade:
+  - {id: Q-41, regra: "data_entrega <= prazo", limiar: "90%", resultado: "94,3%", status: verde, ultima_execucao: 2026-08-31}
+linhagem:
+  origem: [sistema-transportadoras]
+  consumidores: [painel_pontualidade, roteirizador]

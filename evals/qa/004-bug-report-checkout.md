@@ -10,7 +10,7 @@ relato + print + log → cruzar horário e valores → fato: POST /pedidos → 5
 ```
 
 ## Pedido ao agente
-> "Abre um bug disso aqui" — com `base/qa/evidencias/DEF-checkout-cupom.md`.
+> "Abre um bug disso aqui: `base/qa/evidencias/DEF-checkout-cupom.md`."
 
 Material: `base/qa/` inteira.
 

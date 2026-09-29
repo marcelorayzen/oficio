@@ -1,0 +1,171 @@
+# Ofício — configuração do Hermes (Fase 1).
+#
+# Nenhum segredo aqui: a chave do modelo vem do ambiente (`runtime/.env`, fora do git).
+# Este arquivo é montado somente-leitura: o agente não consegue alterar a própria configuração
+# nem desligar os próprios gates (princípio 3).
+
+# ── Modelo ────────────────────────────────────────────────────────────────────
+#
+# Provedor `lmstudio` = endpoint compatível com OpenAI, apontado por `LM_BASE_URL`/`LM_API_KEY`.
+# É o caminho medido no Rayzen (06/09): `provider` separado de `default`, e as duas variáveis de
+# ambiente — a forma `default: provedor/modelo` sai sem credencial e volta 401.
+#
+# Aqui o endpoint é o compatível-com-OpenAI do próprio Gemini, sem passar pelo LiteLLM do Rayzen
+# (o Ofício não depende do Rayzen). Confirmado em 25/09: o Hermes chega ao Gemini por este caminho.
+#
+# Chave própria do Ofício desde 28/09, ainda free tier (~20 requisições/dia): um caso como o 007
+# pode passar disso. Em 27/09 rodou-se provisoriamente com `space-bunny-free` (`opencode-free`) —
+# o único `*-free` que serve fora do cliente OpenCode; nota dele não se compara à do Gemini.
+#
+# 28/09: `gemini-3-flash-preview` → `gemini-3.8-flash` (estável). O preview devolvia 503 "high
+# demand" em rajada e o 007 morreu duas vezes sem passar do 3º passo. Teste direto no mesmo
+# minuto: 3.8-flash 200; 3.7-flash 503; 2.5-flash 404 ("no longer available to new users", e
+# indica o 3.8). Nota tirada com o 3.8 não se compara à de outro modelo.
+model:
+  default: gemini-3.8-flash
+  provider: lmstudio
+
+# ── Gates que o agente não pode desligar ─────────────────────────────────────
+memory:
+  write_approval: true
+skills:
+  write_approval: true
+  # As embutidas do Hermes saem todas: a nota avalia se o agente escolheu a skill certa, e 57
+  # alheias ao ofício (claude-code, computer-use, p5js…) concorreriam com as 9 daqui. Não há
+  # allowlist — `skills.disabled` é lista de nomes, tirada dos SKILL.md do commit pinado (25/09).
+  # `hermes-agent` fica: é ESSENTIAL_SKILLS e não pode ser desligada.
+  # Ao trocar o HERMES_COMMIT, reconfira: skill embutida nova entra LIGADA.
+  disabled:
+    - airtable
+    - apple-notes
+    - apple-reminders
+    - architecture-diagram
+    - arxiv
+    - ascii-video
+    - baoyu-infographic
+    - blocked-page-recovery
+    - box
+    - claude-code
+    - claude-design
+    - codebase-inspection
+    - codex
+    - competitor-news-monitor
+    - computer-use
+    - design-md
+    - document-to-action-items
+    - docx
+    - dogfood
+    - email-inbox-triage
+    - findmy
+    - gif-search
+    - github
+    - google-workspace
+    - grounded-citations
+    - hermes-agent-skill-authoring
+    - himalaya
+    - humanizer
+    - imessage
+    - inspecting-hermes-desktop-dom
+    - llm-wiki
+    - manim-video
+    - maps
+    - meeting-action-items
+    - node-inspect-debugger
+    - notion
+    - obsidian
+    - opencode
+    - p5js
+    - pdf
+    - popular-web-designs
+    - powerpoint
+    - product-price-monitor
+    - python-debugpy
+    - requesting-code-review
+    - sdlc-review
+    - simplify-code
+    - songsee
+    - songwriting-and-ai-music
+    - spike
+    - systematic-debugging
+    - teams-meeting-pipeline
+    - test-driven-development
+    - weekly-review-planning
+    - xlsx
+    - xurl
+    - youtube-content
+
+plugins:
+  enabled: []
+
+# ── MCP de leitura (Fase 2) ──────────────────────────────────────────────────
+#
+# Conta, filtra e resume os CSVs de `base/dados/` (`runtime/mcp/amostras.py`). Entrou porque,
+# mandado medir, o agente contava lendo e errava 4 de 14 (rodada 2026-09-29_0808). Só leitura:
+# diretório fixo montado `:ro`, nome do ativo conferido contra a listagem. Roda com o Python do
+# próprio Hermes, que já traz o pacote `mcp` — nada a instalar. `sampling` desligado: o servidor
+# não tem por que pedir chamadas ao modelo.
+mcp_servers:
+  amostras:
+    command: /opt/hermes/agent/venv/bin/python
+    args: ["/opt/oficio/mcp/amostras.py"]
+    sampling:
+      enabled: false
+
+# ── Chamadas ao modelo fora da resposta ──────────────────────────────────────
+#
+# Cada uma gasta cota do Gemini (free tier: ~20 requisições/dia) sem entrar na nota.
+# - `background_review`: depois de cada turno, um fork relê a conversa (até 16 iterações) para
+#   gravar memória ou mexer em skill. É o autoaprendizado — o mesmo que uma rodada ensinar a
+#   seguinte. Com o gate, só vira pendência; desligado, nem gasta a cota.
+# - `title_generation`: uma requisição por sessão para dar título; no endpoint do Gemini ainda
+#   falha (400, campo `reasoning` desconhecido — 28/09).
+auxiliary:
+  background_review:
+    enabled: false
+  title_generation:
+    enabled: false
+
+# ── Ferramentas fora ─────────────────────────────────────────────────────────
+#
+# O plano pede o agente sem terminal e sem navegador. Nomes conferidos em `hermes tools list`
+# (25/09), não na doc. `code_execution` e `computer_use` saem junto: são outra porta para o mesmo
+# efeito, e desligar só o terminal com as duas ligadas seria desligar o nome, não a capacidade.
+#
+# 28/09, o resto do que não cabe num agente só de leitura (toolsets de `hermes tools list`):
+# - `web`, `connections`, `image_gen`, `tts`: saída para serviço externo; a base é tudo que ele tem.
+# - `delegation`, `cronjob`: subagente e tarefa agendada agem fora da resposta que é corrigida.
+# - `session_search`: lê sessões anteriores — um caso veria a resposta de outro, e uma rodada não
+#   pode ensinar a seguinte.
+agent:
+  # O `gemini-3-flash-preview` devolve 503 "high demand" em rajada (28/09: o 007 morreu no 2º passo
+  # com as 3 tentativas padrão, esperas de ~2s e ~5s). Com 6 a espera dobra até ~80s — uns 3 min
+  # por chamada antes de desistir. Caso que morre assim não é corrigido: roda de novo.
+  api_max_retries: 6
+  disabled_toolsets:
+    - terminal
+    - browser
+    - code_execution
+    - computer_use
+    - web
+    - connections
+    - image_gen
+    - tts
+    - delegation
+    - cronjob
+    - session_search
+
+# `write_file` e `patch` dividem o toolset `file` com a leitura, e o Hermes não desliga ferramenta
+# avulsa. Barradas por hook, pelo nome. O guarda de escrita embutido não serve: ele isenta tudo sob
+# `~/.hermes`, e é lá (memories/, skills/) que uma escrita direta passaria por fora do
+# `write_approval`. `fail_closed`: hook que trava ou erra bloqueia em vez de liberar.
+# `hooks_auto_accept`: sem ele o Hermes pede consentimento no primeiro uso e, sem TTY (`chat -q`),
+# PULA o hook só com um aviso no log — falharia aberto.
+hooks_auto_accept: true
+hooks:
+  pre_tool_call:
+    - matcher: "write_file|patch"
+      command: "sh /opt/oficio/perfil/bloquear-escrita.sh"
+      fail_closed: true
+      timeout: 10
+
+_config_version: 44

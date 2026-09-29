@@ -11,8 +11,10 @@ classificação existente em vez de desenhar uma política do zero.
 
 ## Níveis de referência
 
-Use os níveis **da política da organização** quando ela existir no material. Na ausência, este é
-o padrão:
+Use os níveis **da política da organização do ativo** — procure-a na pasta de políticas antes de
+concluir que não existe, e leia também as regras automáticas de classificação que ela define (é
+nelas que mora a falha de causa). Política de outra organização não vale. Só na ausência
+confirmada, este é o padrão:
 
 | nível | quando |
 |---|---|
