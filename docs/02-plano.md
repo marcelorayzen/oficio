@@ -52,8 +52,22 @@ Estado em 26/09:
 - [x] Executor dos casos (`scripts/rodar-casos.sh`): o agente recebe só o pedido
 - [x] Passo a passo da primeira subida (`docs/03-fase1-runbook.md`), com os cinco pontos que só
       o boot confirma
-- [ ] Primeira subida conferida (passo 3 do runbook)
-- [ ] Casos rodados e corrigidos
+- [x] Primeira subida conferida (passo 3 do runbook) — 27/09, os cinco pontos
+- [x] Casos rodados e corrigidos — 5 rodadas completas com `gpt-6-luna`, notas em `resultados/`
+- [ ] **Generalização:** nos 14 casos em que as skills foram ajustadas, 0/7/7 → 6/6/2
+      (acerto/parcial/falha); nos 4 casos novos, que o agente nunca viu, **1/0/3**. As falhas
+      novas têm uma forma só: o agente entrega o artefato que o pedido nomeia mesmo quando a
+      própria análise diz o contrário. Ajuste feito olhando estes 4 os contamina — medir de novo
+      exige outro lote novo.
+
+Por ofício, rodada `2026-09-29_1104`:
+
+| | acerto | parcial | falha |
+|---|---|---|---|
+| governança, 8 antigos | 4 | 4 | 0 |
+| QA, 6 antigos | 2 | 2 | 2 |
+| governança, 2 novos | 0 | 0 | 2 |
+| QA, 2 novos | 1 | 0 | 1 |
 
 Os gabaritos de QA entram nesta fase **sem** a revisão de Marcelo — decisão dele em 26/09 ("ok
 por hora"). A nota de QA desta rodada é declarada como parcialmente concordância com o Claude.
@@ -62,7 +76,7 @@ por hora"). A nota de QA desta rodada é declarada como parcialmente concordânc
 escolheu a skill certa para o pedido. Incluir casos em que a
 resposta certa é "não há evidência suficiente" — um agente que sempre acha algo não passa.
 
-## Fase 2 — Ferramentas de leitura
+## Fase 2 — Ferramentas de leitura ← começada (`4cc7a95`: MCP de leitura das amostras)
 
 - MCP de leitura para as fontes do domínio (documentos, catálogo de teste).
 - Casos novos que exigem consultar a ferramenta em vez de responder de memória.
@@ -89,7 +103,8 @@ resposta certa é "não há evidência suficiente" — um agente que sempre acha
 
 - Onde roda: servidor doméstico (sem GPU) ou outra máquina. O compose serve a qualquer uma;
   a primeira subida decide.
-- Qual modelo de raciocínio o profissional usa, e com qual orçamento mensal. Provisório:
-  `gemini-3-flash-preview`, direto no Google, sem LiteLLM — a Fase 1 mede se basta.
+- Qual modelo de raciocínio o profissional usa, e com qual orçamento mensal. O config aponta
+  `gemini-3.8-flash` (chave própria); as rodadas completas usaram `gpt-6-luna` via `openai-codex`,
+  escolhido por rodada no executor. Ainda sem decisão de qual fica nem de custo.
 - Se isto é ferramenta pessoal ou produto (muda a leitura da AGPL do OpenViking e o cuidado com
   dados de terceiros).
