@@ -1,0 +1,71 @@
+id_entrega,id_pedido,nome_destinatario,cep,endereco,telefone,status,prazo,data_entrega,observacao
+ENT-0001,PD-20502,Vinícius Jardim,05358-129,"Rua do Comércio, 904",(11) 96664-9363,em_rota,2026-07-29,,
+ENT-0002,PD-20643,Carla Almeida,19316-898,"Rua Sete de Setembro, 2330",(11) 97889-5893,entregue,2026-07-25,2026-07-24,deixar na portaria
+ENT-0003,PD-20816,Bruno Rezende,03443-973,"Rua das Acácias, 537",(11) 92771-1732,em_rota,2026-08-15,,ligar antes
+ENT-0004,PD-20798,Olívia Gomes,05291-330,"Rua da Estação, 2328",(11) 98988-8417,entregue,2026-08-23,2026-08-23,
+ENT-0005,PD-20209,Ana Lacerda,08382-490,"Av. Paulista, 1157",(11) 95112-5500,entregue,2026-08-27,2026-08-24,entregar após 14h
+ENT-0006,PD-20962,Tatiane Iglesias,13775-248,"Rua do Comércio, 2056",(11) 91292-1372,entregue,2026-07-29,2026-07-29,deixar na portaria
+ENT-0007,PD-20142,Olívia Cardoso,11652-304,"Rua do Comércio, 37",(11) 98002-7993,entregue,2026-07-30,2026-07-27,
+ENT-0008,PD-20965,Mariana Nogueira,10859-684,"Av. Brasil, 958",(11) 98474-4745,em_rota,2026-08-01,,ligar antes
+ENT-0009,PD-20169,Diego Ferraz,18071-454,"Av. Brasil, 314",(11) 97138-8025,em_rota,2026-08-19,,entregar após 14h
+ENT-0010,PD-20321,Elisa Nogueira,12572-626,"Rua XV de Novembro, 1830",(11) 91950-6844,entregue,2026-08-14,2026-08-13,
+ENT-0011,PD-20606,Tatiane Nogueira,10109-268,"Rua Sete de Setembro, 1011",(11) 97157-6356,em_rota,2026-08-30,,deixar na portaria
+ENT-0012,PD-20185,Samuel Iglesias,06989-148,"Rua Sete de Setembro, 120",(11) 98703-7307,entregue,2026-08-17,2026-08-17,
+ENT-0013,PD-20169,Paulo Iglesias,05516-457,"Rua da Estação, 390",(11) 96498-5319,entregue,2026-08-22,2026-08-24,
+ENT-0014,PD-20091,Paulo Hirata,13861-419,"Rua XV de Novembro, 2226",(11) 93357-2233,entregue,2026-08-22,2026-08-20,ligar antes
+ENT-0015,PD-20600,Olívia Pacheco,12131-399,"Rua XV de Novembro, 2281",(11) 96170-7019,entregue,2026-07-21,2026-07-21,ligar antes
+ENT-0016,PD-20337,Paulo Duarte,12579-023,"Av. Brasil, 1007",(11) 92927-8195,entregue,2026-08-21,2026-08-20,
+ENT-0017,PD-20034,Bruno Iglesias,12316-215,"Rua XV de Novembro, 1512",(11) 99036-2858,entregue,2026-07-21,2026-07-20,
+ENT-0018,PD-20426,Heitor Iglesias,05869-311,"Rua das Acácias, 1631",(11) 99546-2522,entregue,2026-07-28,2026-07-28,
+ENT-0019,PD-20705,Isabela Gomes,15772-091,"Rua das Acácias, 1050",(11) 96566-7665,entregue,2026-07-24,2026-07-24,deixar na portaria
+ENT-0020,PD-20554,Diego Barbosa,01973-908,"Av. Brasil, 1653",(11) 93645-8599,em_rota,2026-08-20,,portão azul
+ENT-0021,PD-20175,Elisa Ferraz,13472-286,"Av. Paulista, 842",(11) 99314-6567,entregue,2026-08-09,2026-08-09,ligar antes
+ENT-0022,PD-20546,Renata Almeida,04622-429,"Av. Brasil, 1168",(11) 96680-6752,entregue,2026-07-17,2026-07-16,
+ENT-0023,PD-20973,Renata Moura,01692-612,"Rua XV de Novembro, 1814",(11) 92310-7125,entregue,2026-07-26,2026-07-24,portão azul
+ENT-0024,PD-20409,Mariana Cardoso,02975-283,"Rua da Estação, 1785",(11) 99426-4387,entregue,2026-07-15,2026-07-13,ligar antes
+ENT-0025,PD-20064,Elisa Almeida,05222-928,"Rua XV de Novembro, 507",(11) 99005-4742,entregue,2026-07-23,2026-07-22,deixar na portaria
+ENT-0026,PD-20758,Diego Esteves,02801-939,"Rua da Estação, 1600",(11) 97443-6054,entregue,2026-07-21,2026-07-19,portão azul
+ENT-0027,PD-20287,Ana Cardoso,04279-227,"Av. Brasil, 1279",(11) 95747-3553,entregue,2026-08-24,2026-08-21,
+ENT-0028,PD-20940,Mariana Moura,08839-982,"Rua do Comércio, 1956",(11) 98489-7718,entregue,2026-08-13,2026-08-13,deixar na portaria
+ENT-0029,PD-20059,Tatiane Esteves,05036-793,"Rua da Estação, 316",(11) 94549-9914,em_rota,2026-08-11,,deixar na portaria
+ENT-0030,PD-20747,Tatiane Barbosa,19523-812,"Av. Paulista, 2244",(11) 97053-9895,devolvido,2026-08-22,,cliente ausente na 1ª tentativa
+ENT-0031,PD-20092,Bruno Moura,17909-875,"Rua do Comércio, 2013",(11) 96809-8084,entregue,2026-08-05,2026-08-05,
+ENT-0032,PD-20720,Renata Hirata,14062-230,"Av. Paulista, 1858",(11) 91725-6061,entregue,2026-07-29,2026-07-29,ligar antes
+ENT-0033,PD-20514,João Gomes,03768-104,"Rua Sete de Setembro, 394",(11) 97807-6527,entregue,2026-07-18,2026-07-18,entregar após 14h
+ENT-0034,PD-20241,Samuel Iglesias,02768-647,"Rua das Acácias, 1783",(11) 93294-4690,entregue,2026-08-15,2026-08-13,
+ENT-0035,PD-20534,Renata Rezende,14426-869,"Rua das Acácias, 1398",(11) 95885-3380,entregue,2026-08-12,2026-08-16,ligar antes
+ENT-0036,PD-20028,Vinícius Jardim,04518-523,"Av. Brasil, 941",(11) 96290-9080,entregue,2026-07-30,2026-07-28,entregar após 14h
+ENT-0037,PD-20171,Olívia Barbosa,16864-017,"Rua da Estação, 384",(11) 94715-1202,entregue,2026-08-09,2026-08-08,
+ENT-0038,PD-20402,Bruno Pacheco,17971-415,"Rua das Acácias, 1611",(11) 93423-4803,entregue,2026-08-29,2026-08-29,deixar na portaria
+ENT-0039,PD-20387,Diego Moura,02664-988,"Rua do Comércio, 1536",(11) 91541-4075,entregue,2026-08-17,2026-08-15,deixar na portaria
+ENT-0040,PD-20149,Heitor Nogueira,10740-050,"Rua XV de Novembro, 2038",(11) 93051-8518,entregue,2026-08-01,2026-07-29,
+ENT-0041,PD-20203,Paulo Ferraz,08132-241,"Rua Sete de Setembro, 695",(11) 99074-9936,entregue,2026-07-26,2026-07-24,
+ENT-0042,PD-20569,Olívia Hirata,15831-868,"Rua XV de Novembro, 1966",(11) 92633-6021,entregue,2026-07-31,2026-07-29,
+ENT-0043,PD-20190,Gabriela Gomes,01085-148,"Rua das Acácias, 1903",(11) 94784-3743,entregue,2026-07-22,2026-07-26,
+ENT-0044,PD-20745,João Jardim,19492-955,"Rua XV de Novembro, 807",(11) 96222-8318,entregue,2026-08-05,2026-08-03,portão azul
+ENT-0045,PD-20892,Paulo Ferraz,03837-799,"Rua XV de Novembro, 1555",(11) 97438-9644,entregue,2026-07-28,2026-07-28,
+ENT-0046,PD-20396,Mariana Almeida,03302-556,"Rua do Comércio, 672",(11) 96448-8915,em_rota,2026-09-05,,ligar antes
+ENT-0047,PD-20894,Isabela Jardim,13113-949,"Rua XV de Novembro, 2000",(11) 99808-1333,devolvido,2026-08-12,,cliente ausente na 1ª tentativa
+ENT-0048,PD-20291,Gabriela Almeida,19819-334,"Rua Sete de Setembro, 64",(11) 96175-6523,entregue,2026-08-14,2026-08-13,entregar após 14h
+ENT-0049,PD-20148,Fábio Iglesias,08681-050,"Rua XV de Novembro, 1476",(11) 97578-6661,devolvido,2026-07-27,,cliente ausente na 1ª tentativa
+ENT-0050,PD-20709,Bruno Duarte,07974-568,"Av. Brasil, 2155",(11) 97840-8969,em_rota,2026-08-15,,
+ENT-0051,PD-20374,Samuel Gomes,14744-924,"Rua das Acácias, 946",(11) 92351-6771,entregue,2026-08-25,2026-08-25,
+ENT-0052,PD-20227,Bruno Hirata,15780-409,"Rua das Acácias, 131",(11) 97674-5262,entregue,2026-08-02,2026-07-30,portão azul
+ENT-0053,PD-20366,Fábio Queiroz,15665-235,"Rua das Acácias, 743",(11) 99130-1234,em_rota,2026-09-05,,
+ENT-0054,PD-20368,Tatiane Jardim,08396-277,"Rua Sete de Setembro, 893",(11) 92748-1713,entregue,2026-08-23,2026-08-22,
+ENT-0055,PD-20675,Vinícius Esteves,18998-072,"Rua do Comércio, 458",(11) 93283-7616,entregue,2026-08-11,2026-08-11,ligar antes
+ENT-0056,PD-20866,Fábio Pacheco,13569-236,"Rua Sete de Setembro, 945",(11) 99429-4060,em_rota,2026-07-21,,
+ENT-0057,PD-20898,Bruno Jardim,17584-854,"Rua do Comércio, 1051",(11) 97371-6915,entregue,2026-08-10,2026-08-10,
+ENT-0058,PD-20662,Mariana Ferraz,01673-926,"Av. Paulista, 2487",(11) 99077-8404,entregue,2026-08-27,2026-08-25,entregar após 14h
+ENT-0059,PD-20922,Diego Moura,07844-180,"Rua das Acácias, 1205",(11) 99340-2070,devolvido,2026-08-11,,cliente ausente na 1ª tentativa
+ENT-0060,PD-20134,Ana Hirata,03537-235,"Av. Brasil, 1801",(11) 97447-9077,entregue,2026-08-26,2026-08-25,
+ENT-0061,PD-20453,Elisa Duarte,17879-969,"Rua do Comércio, 1837",(11) 97046-3864,entregue,2026-07-28,2026-07-26,portão azul
+ENT-0062,PD-20753,João Hirata,12388-561,"Rua XV de Novembro, 57",(11) 91200-6794,entregue,2026-08-08,2026-08-07,
+ENT-0063,PD-20617,Isabela Almeida,14473-309,"Rua XV de Novembro, 560",(11) 94549-1953,entregue,2026-07-21,2026-07-21,
+ENT-0064,PD-20841,Samuel Jardim,01050-155,"Rua Sete de Setembro, 2307",(11) 95981-1808,entregue,2026-08-09,2026-08-06,entregar após 14h
+ENT-0065,PD-20208,Paulo Moura,02212-107,"Rua das Acácias, 153",(11) 98463-6090,entregue,2026-08-18,2026-08-17,
+ENT-0066,PD-20955,Renata Almeida,02553-430,"Rua da Estação, 1474",(11) 99346-7743,entregue,2026-07-18,2026-07-16,entregar após 14h
+ENT-0067,PD-20382,Mariana Moura,12504-444,"Rua das Acácias, 2284",(11) 97265-2394,entregue,2026-08-13,2026-08-11,
+ENT-0068,PD-20587,Renata Iglesias,06493-953,"Rua Sete de Setembro, 2337",(11) 99362-8252,em_rota,2026-09-03,,portão azul
+ENT-0069,PD-20618,Paulo Rezende,13444-478,"Av. Brasil, 489",(11) 96395-6272,entregue,2026-07-28,2026-07-28,
+ENT-0070,PD-20476,Renata Barbosa,14036-006,"Rua Sete de Setembro, 2372",(11) 95482-4135,devolvido,2026-08-10,,cliente ausente na 1ª tentativa
